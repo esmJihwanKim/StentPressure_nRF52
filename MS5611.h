@@ -15,9 +15,9 @@
 
 #define MS5611_OSR_4096           0x08U
 
-#define MS5611_PROM_BASE_ADDR     0xA2U
-#define MS5611_PROM_REG_COUNT     6
-#define MS5611_PROM_REG_SIZE      2   // 2 bytes exsits in each PROM register 
+#define MS5611_PROM_BASE_ADDR               0xA2U
+#define MS5611_PROM_REGISTER_COUNT          6
+#define MS5611_PROM_REGISTER_CELL_SIZE      2   // 2 bytes exsits in each PROM register 
 
 #define I2C_PROHIBITED_MEM_ADDR   0xFFU
 

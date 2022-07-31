@@ -14,7 +14,6 @@
   <ProjectSessionItem path="twi_sensor_pca10040"/>
   <ProjectSessionItem path="twi_sensor_pca10040;twi_sensor_pca10040"/>
   <ProjectSessionItem path="twi_sensor_pca10040;twi_sensor_pca10040;Application"/>
-  <ProjectSessionItem path="twi_sensor_pca10040;twi_sensor_pca10040;nRF_Segger_RTT"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -39,10 +38,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="54" useTextEdit="1" path="../../../main.c" left="0" selected="1" top="36" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="87" useTextEdit="1" folds0="8,21,41,51" path="../../../main.c" left="0" selected="1" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="3" useTextEdit="1" path="../../../MS5611.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="18" y="23" useTextEdit="1" path="../../../main.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="31" y="21" useTextEdit="1" path="../../../MS5611.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="19" useTextEdit="1" path="../../../main.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="38" y="19" useTextEdit="1" openedFrom="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52/main.c" path="../../../MS5611.h" left="0" top="0" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="twi_sensor_pca10040" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
