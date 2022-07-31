@@ -15,14 +15,6 @@
 #include "MS5611.h"
 
 
-/* TWI instance ID. */
-#define TWI_INSTANCE_ID     0
-
-
-/* nRF pins for I2C bus */
-#define SCL_PIN 22
-#define SDA_PIN 23
-
 
 
 #endif

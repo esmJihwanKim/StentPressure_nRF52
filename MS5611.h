@@ -4,6 +4,14 @@
 #include <stdbool.h>
 #include "nrf_drv_twi.h"
 
+/* nRF pins for I2C bus */
+#define SCL_PIN 22
+#define SDA_PIN 23
+
+
+/* TWI instance ID. */
+#define TWI_INSTANCE_ID    0
+
 /* Common addresses definition for temperature sensor. */
 #define MS5611_ADDR_CSB_LOW       0x77U  // CSB = GND
 
@@ -19,6 +27,6 @@
 #define MS5611_PROM_REGISTER_COUNT          6
 #define MS5611_PROM_REGISTER_CELL_SIZE      2   // 2 bytes exsits in each PROM register 
 
-#define I2C_PROHIBITED_MEM_ADDR   0xFFU
+#define I2C_NO_MEM_ADDR   0xFFU
 
 #endif
