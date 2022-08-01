@@ -40,10 +40,13 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="15" useTextEdit="1" folds0="20,40,51,57,70,104,111,134" path="../../../main.c" left="0" selected="1" top="15" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="177" useTextEdit="1" folds0="20,40,51,57,70,108,115,138,156,162" path="../../../main.c" left="0" selected="1" top="63" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="36" y="57" useTextEdit="1" path="../../../../../../external/segger_rtt/SEGGER_RTT_Syscalls_SES.c" left="0" top="33" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../config/sdk_config.h" left="0" top="54" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="63" y="51" useTextEdit="1" path="../../../../../../integration/nrfx/legacy/nrf_drv_twi.c" left="0" top="30" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="32" useTextEdit="1" path="../../../MS5611.h" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../MS5611.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../main.h" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="twi_sensor_pca10040" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="twi_sensor_pca10040" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

@@ -99,6 +99,10 @@ typedef struct
 } PROM_Coefficients;  // page 8 of data sheet  
 
 static PROM_Coefficients prom_coefficients; 
+static uint32_t   last_pressure_conversion; 
+static uint32_t   last_temperature_conversion; 
+static int32_t    temporary_temperature; 
+static uint32_t   now;
 
 /* Resets */  
 void ms5611_reset(void)
@@ -148,16 +152,36 @@ bool ms5611_init(void)
     return true; 
 }
 
-//TODO: READ RAW DATA
-bool ms5611_read_raw_sensor_data(void)
+/* Start converting raw data */
+int32_t ms5611_start_conversion(uint8_t command)
 {
-    
+    i2c_slave_write_byte(MS5611_ADDR_CSB_LOW, I2C_NO_MEM_ADDR, command);
 }
+
+/* Get the converted data */ 
+int32_t ms5611_get_convered_data(uint8_t command)
+{
+    int32_t conversion = 0; 
+    uint8_t buffer[MS5611_SAMPLED_DATA_SIZE]; 
+    // request for ADC sampled data - 
+    i2c_slave_write_byte(MS5611_ADDR_CSB_LOW, I2C_NO_MEM_ADDR, 0x00);   
+    i2c_slave_read_bytes(MS5611_ADDR_CSB_LOW, I2C_NO_MEM_ADDR, MS5611_SAMPLED_DATA_SIZE, buffer); 
+    // concatenate 8 bit buffers into one complete variable
+    conversion =  ((int32_t)buffer[0] << 16) | ((int32_t)buffer[1] << 8) | (buffer[2]); 
+    return conversion;
+}
+
+
+//TODO: Get raw temperature 
+int32_t ms5611_get_raw_temperature(uint8_t osr) 
+{
+   // to be implemented 
+}
+
 
 //TODO: Calculate Temperature 
 // dT = D2 - tref = D2 - C5 * 2^8 
 // TEMP = 20 + dT*TEMPSENS = 2000 + dT * C6 / 2^23 
-
 
 /* ---------------------------------------------------------------------------------------------*/
 
@@ -185,7 +209,6 @@ int main(void)
         NRF_LOG_FLUSH();                       
     }                                          
                       
-    
     while (true)                               
     {                                          
         nrf_delay_ms(500);

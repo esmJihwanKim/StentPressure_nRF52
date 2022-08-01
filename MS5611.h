@@ -29,4 +29,9 @@
 
 #define I2C_NO_MEM_ADDR   0xFFU
 
+// D1 and D2 result size (bytes) : 8 * 3 = 24 bits -> from 24bit ADC
+#define MS5611_SAMPLED_DATA_SIZE     3   
+
+extern volatile uint32_t ms_ticks;
+
 #endif

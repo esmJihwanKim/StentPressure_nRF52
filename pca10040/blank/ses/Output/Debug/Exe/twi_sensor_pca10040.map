@@ -2476,8 +2476,19 @@ Discarded input sections
                 0x0000000000000000       0x2c Output/Debug/Obj/twi_sensor_pca10040/main.o
  .text.i2c_slave_write_bytes
                 0x0000000000000000       0x84 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .text.ms5611_read_raw_sensor_data
-                0x0000000000000000        0x6 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .bss.last_pressure_conversion
+                0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .bss.last_temperature_conversion
+                0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .bss.temporary_temperature
+                0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .bss.now       0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .text.ms5611_start_conversion
+                0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .text.ms5611_get_convered_data
+                0x0000000000000000       0x44 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .text.ms5611_get_raw_temperature
+                0x0000000000000000       0x10 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_macro   0x0000000000000000      0xb68 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_macro   0x0000000000000000      0x25d Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_macro   0x0000000000000000      0x26e Output/Debug/Obj/twi_sensor_pca10040/main.o
@@ -2632,9 +2643,9 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x56 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
  .debug_macro   0x0000000000000000       0x3e Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
  .debug_macro   0x0000000000000000       0x78 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
- .debug_macro   0x0000000000000000       0x58 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
+ .debug_macro   0x0000000000000000       0x5e Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
  .debug_line    0x0000000000000000      0x6a5 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
- .debug_str     0x0000000000000000    0x6f389 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
+ .debug_str     0x0000000000000000    0x6f3a4 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
  .comment       0x0000000000000000       0x36 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
  .ARM.attributes
                 0x0000000000000000       0x36 Output/Debug/Obj/twi_sensor_pca10040/MS5611.o
@@ -6036,7 +6047,7 @@ LOAD linker stubs
  .note.GNU-stack
                 0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
 
-.debug_line     0x0000000000000000    0x121d3
+.debug_line     0x0000000000000000    0x12223
  .debug_line    0x0000000000000000      0x17d Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_line    0x000000000000017d      0x75b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_line    0x00000000000008d8      0xa08 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6061,12 +6072,12 @@ LOAD linker stubs
  .debug_line    0x000000000000962a     0x147d Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
  .debug_line    0x000000000000aaa7     0x13ea Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_line    0x000000000000be91     0x13a3 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
- .debug_line    0x000000000000d234      0xc6d Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_line    0x000000000000dea1       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_line    0x000000000000df43       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_line    0x000000000000e007     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_line    0x000000000000d234      0xcbd Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_line    0x000000000000def1       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_line    0x000000000000df93       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_line    0x000000000000e057     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_info     0x0000000000000000    0x148cf
+.debug_info     0x0000000000000000    0x149ad
  .debug_info    0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_info    0x0000000000000022      0x6dc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_info    0x00000000000006fe     0x1099 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6091,12 +6102,12 @@ LOAD linker stubs
  .debug_info    0x0000000000009612     0x1eaa Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
  .debug_info    0x000000000000b4bc     0x1e7a Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_info    0x000000000000d336     0x1fc3 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
- .debug_info    0x000000000000f2f9     0x1261 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_info    0x000000000001055a       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_info    0x000000000001057d       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_info    0x00000000000105a0     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_info    0x000000000000f2f9     0x133f Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_info    0x0000000000010638       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_info    0x000000000001065b       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_info    0x000000000001067e     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_abbrev   0x0000000000000000     0x353a
+.debug_abbrev   0x0000000000000000     0x354d
  .debug_abbrev  0x0000000000000000       0x12 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_abbrev  0x0000000000000012      0x1d3 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_abbrev  0x00000000000001e5      0x2d9 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6121,12 +6132,12 @@ LOAD linker stubs
  .debug_abbrev  0x000000000000241e      0x3b6 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
  .debug_abbrev  0x00000000000027d4      0x3ce Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_abbrev  0x0000000000002ba2      0x396 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
- .debug_abbrev  0x0000000000002f38      0x35b Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_abbrev  0x0000000000003293       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_abbrev  0x00000000000032a7       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_abbrev  0x00000000000032bb      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_abbrev  0x0000000000002f38      0x36e Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_abbrev  0x00000000000032a6       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_abbrev  0x00000000000032ba       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_abbrev  0x00000000000032ce      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_aranges  0x0000000000000000     0x1910
+.debug_aranges  0x0000000000000000     0x1920
  .debug_aranges
                 0x0000000000000000       0x50 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_aranges
@@ -6176,15 +6187,15 @@ LOAD linker stubs
  .debug_aranges
                 0x0000000000000a30      0x1e0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_aranges
-                0x0000000000000c10       0x90 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000000c10       0xa0 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_aranges
-                0x0000000000000ca0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+                0x0000000000000cb0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
  .debug_aranges
-                0x0000000000000cc0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+                0x0000000000000cd0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
  .debug_aranges
-                0x0000000000000ce0      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000000cf0      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_str      0x0000000000000000    0x850da
+.debug_str      0x0000000000000000    0x85178
  .debug_str     0x0000000000000000       0xcd Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_str     0x00000000000000cd    0x6deac Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
                                       0x6ecdf (size before relaxing)
@@ -6232,16 +6243,16 @@ LOAD linker stubs
                                       0x728d5 (size before relaxing)
  .debug_str     0x0000000000079837      0x942 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
                                       0x72d5c (size before relaxing)
- .debug_str     0x000000000007a179     0x139b Output/Debug/Obj/twi_sensor_pca10040/main.o
-                                      0x74e8b (size before relaxing)
- .debug_str     0x000000000007b514       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_str     0x000000000007a179     0x1439 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                                      0x74f34 (size before relaxing)
+ .debug_str     0x000000000007b5b2       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
                                          0xe1 (size before relaxing)
- .debug_str     0x000000000007b578       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_str     0x000000000007b616       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
                                          0xe6 (size before relaxing)
- .debug_str     0x000000000007b5e1     0x9af9 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_str     0x000000000007b67f     0x9af9 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
                                       0x69d47 (size before relaxing)
 
-.debug_ranges   0x0000000000000000     0x1738
+.debug_ranges   0x0000000000000000     0x1748
  .debug_ranges  0x0000000000000000       0x48 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_ranges  0x0000000000000048       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_ranges  0x0000000000000058       0x50 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6266,10 +6277,10 @@ LOAD linker stubs
  .debug_ranges  0x0000000000000530      0x1b8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
  .debug_ranges  0x00000000000006e8      0x1e0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_ranges  0x00000000000008c8      0x1d0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
- .debug_ranges  0x0000000000000a98       0x80 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_ranges  0x0000000000000b18      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_ranges  0x0000000000000a98       0x90 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_ranges  0x0000000000000b28      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_frame    0x0000000000000000     0x4f4c
+.debug_frame    0x0000000000000000     0x4fac
  .debug_frame   0x0000000000000000       0x38 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_frame   0x0000000000000038      0x16c Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
  .debug_frame   0x00000000000001a4       0x58 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
@@ -6293,11 +6304,11 @@ LOAD linker stubs
  .debug_frame   0x00000000000015fc      0x774 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
  .debug_frame   0x0000000000001d70      0x870 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_frame   0x00000000000025e0      0x7fc Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
- .debug_frame   0x0000000000002ddc      0x230 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_frame   0x000000000000300c     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_frame   0x0000000000002ddc      0x290 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_frame   0x000000000000306c     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubnames
-                0x0000000000000000     0x682d
+                0x0000000000000000     0x6923
  .debug_pubnames
                 0x0000000000000000       0xab Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_pubnames
@@ -6345,9 +6356,9 @@ LOAD linker stubs
  .debug_pubnames
                 0x00000000000037d8      0xcda Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_pubnames
-                0x00000000000044b2      0x4a6 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x00000000000044b2      0x59c Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_pubnames
-                0x0000000000004958     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000004a4e     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubtypes
                 0x0000000000000000     0x31e4
@@ -6402,7 +6413,7 @@ LOAD linker stubs
  .debug_pubtypes
                 0x000000000000301d      0x1c7 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_macro    0x0000000000000000     0x6963
+.debug_macro    0x0000000000000000     0x6969
  .debug_macro   0x0000000000000000      0x29e Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_macro   0x000000000000029e       0x28 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_macro   0x00000000000002c6       0x52 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
@@ -6481,9 +6492,9 @@ LOAD linker stubs
  .debug_macro   0x00000000000050cc       0x5e Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_macro   0x000000000000512a      0x17a Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_macro   0x00000000000052a4       0x10 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x00000000000052b4       0x58 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x000000000000530c      0x15d Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x0000000000005469      0x44e Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x00000000000058b7      0xa28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x00000000000062df      0x520 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x00000000000067ff      0x164 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x00000000000052b4       0x5e Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x0000000000005312      0x15d Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x000000000000546f      0x44e Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x00000000000058bd      0xa28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x00000000000062e5      0x520 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x0000000000006805      0x164 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
