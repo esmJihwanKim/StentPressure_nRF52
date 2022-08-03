@@ -99,8 +99,8 @@ typedef struct
 } PROM_Coefficients;  // page 8 of data sheet  
 
 static PROM_Coefficients prom_coefficients; 
-static uint32_t   last_pressure_conversion; 
-static uint32_t   last_temperature_conversion; 
+static uint32_t   last_pres_conversion_time; 
+static uint32_t   last_temp_conversion_time; 
 static int32_t    temporary_temperature; 
 static uint32_t   now;
 
@@ -159,7 +159,7 @@ int32_t ms5611_start_conversion(uint8_t command)
 }
 
 /* Get the converted data */ 
-int32_t ms5611_get_convered_data(uint8_t command)
+int32_t ms5611_get_converted_data(uint8_t command)
 {
     int32_t conversion = 0; 
     uint8_t buffer[MS5611_SAMPLED_DATA_SIZE]; 
@@ -172,16 +172,39 @@ int32_t ms5611_get_convered_data(uint8_t command)
 }
 
 
-//TODO: Get raw temperature 
-int32_t ms5611_get_raw_temperature(uint8_t osr) 
+// Get raw temperature 
+int32_t ms5611_get_raw_temperature() 
 {
-   // to be implemented 
+    int32_t now = ms_ticks;
+    int32_t conversion_result; 
+    // conversion has not started 
+    if(last_temp_conversion_time == 0 && last_pres_conversion_time == 0) 
+    {
+        ms5611_start_conversion(MS5611_REG_D2 + MS5611_OSR_OFFSET_4096);
+        last_temp_conversion_time = now; 
+    }
+    // conversion done
+    else 
+    { 
+        if(last_temp_conversion_time != 0 && (now - last_temp_conversion_time) >= CONVERSION_TIME_MS)
+        {
+            last_temp_conversion_time = 0; 
+            conversion_result = ms5611_get_converted_data(MS5611_REG_D2 + MS5611_OSR_OFFSET_4096);
+            return conversion_result;
+        }
+    }
 }
 
+//TODO: bug exists as ms_ticks is not updated every 1ms. 
 
-//TODO: Calculate Temperature 
+
+/* Calculate Temperature */ 
 // dT = D2 - tref = D2 - C5 * 2^8 
 // TEMP = 20 + dT*TEMPSENS = 2000 + dT * C6 / 2^23 
+
+
+
+
 
 /* ---------------------------------------------------------------------------------------------*/
 
