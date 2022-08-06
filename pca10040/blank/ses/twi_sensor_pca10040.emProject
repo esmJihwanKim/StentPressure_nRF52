@@ -69,13 +69,19 @@
       <file file_name="../../../../../../modules/nrfx/drivers/src/nrfx_twim.c" />
       <file file_name="../../../../../../modules/nrfx/drivers/src/nrfx_uart.c" />
       <file file_name="../../../../../../modules/nrfx/drivers/src/nrfx_uarte.c" />
+      <file file_name="../../../../../../modules/nrfx/drivers/src/nrfx_timer.c" />
     </folder>
     <folder Name="Application">
       <file file_name="../../../main.c" />
       <file file_name="../config/sdk_config.h" />
       <file file_name="../../../main.h" />
-      <file file_name="../../../MS5611.c" />
-      <file file_name="../../../MS5611.h" />
+      <file file_name="../../../systick.h" />
+      <file file_name="../../../hw_timer.c" />
+      <file file_name="../../../hw_timer.h" />
+      <file file_name="../../../i2cdev.c" />
+      <file file_name="../../../i2cdev.h" />
+      <file file_name="../../../ms5611.c" />
+      <file file_name="../../../ms5611.h" />
     </folder>
     <folder Name="nRF_Segger_RTT">
       <file file_name="../../../../../../external/segger_rtt/SEGGER_RTT.c" />

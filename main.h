@@ -12,10 +12,10 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 
-#include "MS5611.h"
+#include "i2cdev.h"
+#include "ms5611.h"
 
-
-
+#include "nrf_drv_timer.h"
 
 #endif
 
