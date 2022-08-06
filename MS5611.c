@@ -20,12 +20,12 @@
 
 typedef struct
 {
-  uint16_t psens;
-  uint16_t off;
-  uint16_t tcs;
-  uint16_t tco;
-  uint16_t tref;
-  uint16_t tsens;
+  uint16_t psens;     // c1 
+  uint16_t off;       // c2
+  uint16_t tcs;       // c3
+  uint16_t tco;       // c4
+  uint16_t tref;      // c5
+  uint16_t tsens;     // c6
 } CalReg;
 
 static uint8_t devAddr;
@@ -59,98 +59,25 @@ bool ms5611Init(void)
   return true;
 }
 
-float ms5611GetPressure(uint8_t osr)
+
+/* acquires temperature and pressure : take in pointer and manipulate. no output required */
+void ms5611GetSensorData(float* result_array)
 {
-  // see datasheet page 7 for formulas
-  int32_t rawPress = ms5611RawPressure(osr);
-  int64_t dT = (int64_t)ms5611GetDeltaTemp(osr);
-  if (dT == 0)
-  {
-    return 0;
-  }
-  int64_t off = (((int64_t)calReg.off) << 16) + ((calReg.tco * dT) >> 7);
-  int64_t sens = (((int64_t)calReg.psens) << 15) + ((calReg.tcs * dT) >> 8);
-  if (rawPress != 0)
-  {
-    return ((((rawPress * sens) >> 21) - off) >> (15 - EXTRA_PRECISION))
-        / ((1 << EXTRA_PRECISION) * 100.0);
-  }
-  else
-  {
-    return 0;
-  }
-}
+    // formulas in datasheet page 7 
+    int32_t raw_pressure = ms5611RawPressure(devAddr);
+    int32_t raw_temperature = ms5611RawTemperature(devAddr); 
+    int32_t dT, result_temperature, result_pressure;
 
-float ms5611CalcPressure(int32_t rawPress, int32_t dT)
-{
-  int64_t off;
-  int64_t sens;
+    // dT = D2 - C5 * 2^8     :  Difference between actual and reference temp 
+    dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
 
-  if (rawPress == 0 || dT == 0)
-  {
-    return 0;
-  }
+    // 2000 + dT * C6 / 2^23  :  Actual temperature 
+    result_temperature = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
+    
+    
 
-  off = (((int64_t)calReg.off) << 16) + ((calReg.tco * (int64_t)dT) >> 7);
-  sens = (((int64_t)calReg.psens) << 15) + ((calReg.tcs * (int64_t)dT) >> 8);
 
-  return ((((rawPress * sens) >> 21) - off) >> (15 - EXTRA_PRECISION))
-          / ((1 << EXTRA_PRECISION) * 100.0);
-}
-
-float ms5611GetTemperature(uint8_t osr)
-{
-  // see datasheet page 7 for formulas
-  int32_t dT;
-
-  dT = ms5611GetDeltaTemp(osr);
-  if (dT != 0)
-  {
-    return ms5611CalcTemp(dT);
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-int32_t ms5611GetDeltaTemp(uint8_t osr)
-{
-  int32_t rawTemp = ms5611RawTemperature(osr);
-  if (rawTemp != 0)
-  {
-    return ms5611CalcDeltaTemp(rawTemp);
-  }
-  else
-  {
-    return 0;
-  }
-}
-
-float ms5611CalcTemp(int32_t deltaT)
-{
-  if (deltaT == 0)
-  {
-    return 0;
-  }
-  else
-  {
-    return (float)(((1 << EXTRA_PRECISION) * 2000)
-            + (((int64_t)deltaT * calReg.tsens) >> (23 - EXTRA_PRECISION)))
-            / ((1 << EXTRA_PRECISION)* 100.0);
-  }
-}
-
-int32_t ms5611CalcDeltaTemp(int32_t rawTemp)
-{
-  if (rawTemp == 0)
-  {
-    return 0;
-  }
-  else
-  {
-    return rawTemp - (((int32_t)calReg.tref) << 8);
-  }
+    return; 
 }
 
 int32_t ms5611RawPressure(uint8_t osr)
@@ -178,8 +105,7 @@ int32_t ms5611RawTemperature(uint8_t osr)
   if (lastTempConv != 0 && (now - lastTempConv) >= CONVERSION_TIME_MS)
   {
     lastTempConv = 0;
-    tempCache = ms5611GetConversion(MS5611_D2 + osr);
-    return tempCache;
+    return ms5611GetConversion(MS5611_D2 + osr);
   }
   else
   {

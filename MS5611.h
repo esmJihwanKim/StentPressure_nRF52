@@ -43,22 +43,19 @@
 #define CONST_PF 0.1902630958 //(1/5.25588f) Pressure factor
 #define CONST_PF2 44330.0f
 
-
+void ms5611Reset(void);
+bool ms5611ReadPROM(void);
 bool ms5611Init(void);
 
-float ms5611GetPressure(uint8_t osr);
-float ms5611CalcPressure(int32_t rawPress, int32_t dT);
-float ms5611GetTemperature(uint8_t osr);
-float ms5611CalcTemp(int32_t deltaT);
-int32_t ms5611GetDeltaTemp(uint8_t osr);
-int32_t ms5611CalcDeltaTemp(int32_t rawTemp);
-int32_t ms5611RawPressure(uint8_t osr);
-int32_t ms5611RawTemperature(uint8_t osr);
-bool ms5611ReadPROM(void);
-void ms5611Reset(void);
 void ms5611StartConversion(uint8_t command);
 int32_t ms5611GetConversion(uint8_t command);
 
-void ms5611GetData(float* pressure, float* temperature, float* asl);
-float ms5611PressureToAltitude(float* pressure);
+
+int32_t ms5611RawPressure(uint8_t osr);
+int32_t ms5611RawTemperature(uint8_t osr);
+
+
+void ms5611GetSensorData(float* result_array);
+
+
 #endif // MS5611_H

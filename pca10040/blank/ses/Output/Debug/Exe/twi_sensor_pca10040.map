@@ -1,7 +1,5 @@
 Archive member included to satisfy reference by file (symbol)
 
-C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
-                              Output/Debug/Obj/twi_sensor_pca10040/ms5611.o (__aeabi_ddiv)
 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
                               Output/Debug/Obj/twi_sensor_pca10040/nrf_log_str_formatter.o (isprint)
 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(sortops.o)
@@ -18,6 +16,8 @@ C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_s
                               (__SEGGER_RTL_vfscanf_long)
 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(errno.o)
                               C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o) (__aeabi_errno_addr)
+C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+                              C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(timeops.o) (__aeabi_i2d)
 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(heapops.o)
                               C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o) (malloc)
 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(intasmops_arm.o)
@@ -2903,18 +2903,8 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .bss.tempDeltaT
                 0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611GetPressure
-                0x0000000000000000      0x1d0 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611CalcPressure
-                0x0000000000000000      0x1bc Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611GetTemperature
-                0x0000000000000000       0x3c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611GetDeltaTemp
-                0x0000000000000000       0x30 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611CalcTemp
+ .text.ms5611GetSensorData
                 0x0000000000000000       0x7c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611CalcDeltaTemp
-                0x0000000000000000       0x24 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .text.ms5611RawPressure
                 0x0000000000000000       0x78 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_macro   0x0000000000000000      0xb68 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
@@ -3979,109 +3969,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x82 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .debug_macro   0x0000000000000000       0x40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .debug_macro   0x0000000000000000      0x3dc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .text.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .data.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .bss.libc      0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .rodata.libc.__aeabi_ddiv_reciprocal_table
-                0x0000000000000000      0x180 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fadd
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dadd
-                0x0000000000000000      0x240 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fsub
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dsub
-                0x0000000000000000        0x8 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_frsub
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_drsub
-                0x0000000000000000        0x8 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fmul
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dmul
-                0x0000000000000000      0x130 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fdiv
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_ddiv
-                0x0000000000000000      0x1c4 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmple
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmple
-                0x0000000000000000       0x3c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmpeq
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmpeq
-                0x0000000000000000       0x34 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmpge
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmpge
-                0x0000000000000000       0x3c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmpgt
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmpgt
-                0x0000000000000000       0x38 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmplt
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmplt
-                0x0000000000000000       0x38 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_fcmpun
-                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_dcmpun
-                0x0000000000000000       0x28 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cfcmpeq
-                0x0000000000000000       0x28 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cdcmpeq
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cfcmple
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cdcmple
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cfrcmple
-                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cdrcmple
-                0x0000000000000000       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cfcmp_impl
-                0x0000000000000000       0x22 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_cdcmp_impl
-                0x0000000000000000       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_f2iz
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_d2iz
-                0x0000000000000000       0x4c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_f2lz
-                0x0000000000000000       0x74 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_d2lz
-                0x0000000000000000       0x80 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_f2uiz
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_d2uiz
-                0x0000000000000000       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_f2ulz
-                0x0000000000000000       0x40 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_d2ulz
-                0x0000000000000000       0x40 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_i2f
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_i2d
-                0x0000000000000000       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_l2f
-                0x0000000000000000       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_l2d
-                0x0000000000000000       0x68 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_ui2f
-                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_ui2d
-                0x0000000000000000       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_ul2f
-                0x0000000000000000       0x54 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_ul2d
-                0x0000000000000000       0x5c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_f2d
-                0x0000000000000000       0x34 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .text.libc.__aeabi_d2f
-                0x0000000000000000       0x4c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
- .ARM.attributes
-                0x0000000000000000       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
  .text.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_current_locale
                 0x0000000000000000       0x1a C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
@@ -4656,6 +4543,109 @@ Discarded input sections
                 0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(errno.o)
  .ARM.attributes
                 0x0000000000000000       0x3e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(errno.o)
+ .text.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .data.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .bss.libc      0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .rodata.libc.__aeabi_ddiv_reciprocal_table
+                0x0000000000000000      0x180 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fadd
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dadd
+                0x0000000000000000      0x240 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fsub
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dsub
+                0x0000000000000000        0x8 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_frsub
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_drsub
+                0x0000000000000000        0x8 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fmul
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dmul
+                0x0000000000000000      0x130 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fdiv
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_ddiv
+                0x0000000000000000      0x1c4 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmple
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmple
+                0x0000000000000000       0x3c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmpeq
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmpeq
+                0x0000000000000000       0x34 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmpge
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmpge
+                0x0000000000000000       0x3c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmpgt
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmpgt
+                0x0000000000000000       0x38 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmplt
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmplt
+                0x0000000000000000       0x38 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_fcmpun
+                0x0000000000000000       0x18 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_dcmpun
+                0x0000000000000000       0x28 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cfcmpeq
+                0x0000000000000000       0x28 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cdcmpeq
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cfcmple
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cdcmple
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cfrcmple
+                0x0000000000000000       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cdrcmple
+                0x0000000000000000       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cfcmp_impl
+                0x0000000000000000       0x22 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_cdcmp_impl
+                0x0000000000000000       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_f2iz
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_d2iz
+                0x0000000000000000       0x4c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_f2lz
+                0x0000000000000000       0x74 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_d2lz
+                0x0000000000000000       0x80 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_f2uiz
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_d2uiz
+                0x0000000000000000       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_f2ulz
+                0x0000000000000000       0x40 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_d2ulz
+                0x0000000000000000       0x40 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_i2f
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_i2d
+                0x0000000000000000       0x24 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_l2f
+                0x0000000000000000       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_l2d
+                0x0000000000000000       0x68 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_ui2f
+                0x0000000000000000       0x10 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_ui2d
+                0x0000000000000000       0x1c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_ul2f
+                0x0000000000000000       0x54 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_ul2d
+                0x0000000000000000       0x5c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_f2d
+                0x0000000000000000       0x34 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .text.libc.__aeabi_d2f
+                0x0000000000000000       0x4c C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
+ .ARM.attributes
+                0x0000000000000000       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(floatasmops_arm.o)
  .text.libc     0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(heapops.o)
  .text.libc.__heap_lock
                 0x0000000000000000        0x2 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(heapops.o)
@@ -5063,7 +5053,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .init_rodata is too large to fit in FLASH1 memory segment)
                 0x00000000000003cc                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x00000000000003cc     0x699c
+.text           0x00000000000003cc     0x6994
                 0x00000000000003cc                __text_start__ = .
  *(.text .text.* .gnu.linkonce.t.* .glue_7t .glue_7 .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x00000000000003cc        0x0 linker stubs
@@ -5751,99 +5741,99 @@ Linker script and memory map
                 0x00000000000060fc       0x48 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
                 0x00000000000060fc                ms5611Init
  .text.ms5611RawTemperature
-                0x0000000000006144       0x84 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000006144       0x7c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
                 0x0000000000006144                ms5611RawTemperature
  .text.ms5611StartConversion
-                0x00000000000061c8       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000061c8                ms5611StartConversion
+                0x00000000000061c0       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000061c0                ms5611StartConversion
  .text.ms5611GetConversion
-                0x00000000000061f0       0x50 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000061f0                ms5611GetConversion
+                0x00000000000061e8       0x50 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000061e8                ms5611GetConversion
  .text.ms5611ReadPROM
-                0x0000000000006240       0x98 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x0000000000006240                ms5611ReadPROM
+                0x0000000000006238       0x98 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000006238                ms5611ReadPROM
  .text.ms5611Reset
-                0x00000000000062d8       0x18 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000062d8                ms5611Reset
+                0x00000000000062d0       0x18 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000062d0                ms5611Reset
  .text.__NVIC_SystemReset
-                0x00000000000062f0       0x28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000062e8       0x28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_12
-                0x0000000000006318       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006310       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_16
-                0x00000000000063a0       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006398       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_31
-                0x0000000000006408       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006400       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_32
-                0x0000000000006490       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006488       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_36
-                0x00000000000064f8       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000064f0       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_37
-                0x0000000000006580       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006578       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_57
-                0x00000000000065e8       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000065e0       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_66
-                0x0000000000006650       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006648       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_108
-                0x00000000000066d8       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000066d0       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_136
-                0x0000000000006760       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006758       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_182
-                0x00000000000067e8       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000067e0       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_249
-                0x0000000000006848       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006840       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_handle_approtect
-                0x00000000000068a8       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068a0       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nvmc_wait
-                0x00000000000068c8       0x18 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x00000000000068c8                nvmc_wait
+                0x00000000000068c0       0x18 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068c0                nvmc_wait
  .text.nvmc_config
-                0x00000000000068e0       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x00000000000068e0                nvmc_config
+                0x00000000000068d8       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068d8                nvmc_config
  .text.SystemCoreClockUpdate
-                0x0000000000006900       0x14 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x0000000000006900                SystemCoreClockUpdate
+                0x00000000000068f8       0x14 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068f8                SystemCoreClockUpdate
  .text.SystemInit
-                0x0000000000006914      0x2ac Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x0000000000006914                SystemInit
+                0x000000000000690c      0x2ac Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000690c                SystemInit
  .text.libc.__SEGGER_RTL_ascii_mbtowc
-                0x0000000000006bc0       0x2e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006bc0                __SEGGER_RTL_ascii_mbtowc
+                0x0000000000006bb8       0x2e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006bb8                __SEGGER_RTL_ascii_mbtowc
  .text.libc.__SEGGER_RTL_ascii_wctomb
-                0x0000000000006bee        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006bee                __SEGGER_RTL_ascii_wctomb
+                0x0000000000006be6        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006be6                __SEGGER_RTL_ascii_wctomb
  .text.libc.__SEGGER_RTL_isctype
-                0x0000000000006bfc       0x1e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006bf4       0x1e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.isprint
-                0x0000000000006c1a        0x6 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006c1a                isprint
+                0x0000000000006c12        0x6 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c12                isprint
  .text.libc.__SEGGER_RTL_ascii_isctype
-                0x0000000000006c20       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c18       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_toupper
-                0x0000000000006c40        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c38        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_tolower
-                0x0000000000006c4c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c44        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_iswctype
-                0x0000000000006c58       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c50       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_towupper
-                0x0000000000006c78        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c70        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_towlower
-                0x0000000000006c84        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c7c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.strlen
-                0x0000000000006c90       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
-                0x0000000000006c90                strlen
+                0x0000000000006c88       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
+                0x0000000000006c88                strlen
  .text.libc.memcpy
-                0x0000000000006cf0       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
-                0x0000000000006cf0                __aeabi_memcpy
-                0x0000000000006cf0                memcpy
-                0x0000000000006d12                __aeabi_memcpy8
-                0x0000000000006d12                __aeabi_memcpy4
+                0x0000000000006ce8       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
+                0x0000000000006ce8                __aeabi_memcpy
+                0x0000000000006ce8                memcpy
+                0x0000000000006d0a                __aeabi_memcpy8
+                0x0000000000006d0a                __aeabi_memcpy4
  .text.__SEGGER_RTL_init_heap
-                0x0000000000006d54       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/heapops_basic_v7em_little.a(heapops_basic.o)
-                0x0000000000006d54                __SEGGER_RTL_init_heap
-                0x0000000000006d68                . = ALIGN (MAX ((__text_start__ + 0x4), .), 0x4)
-                0x0000000000006d68                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x000000000000699c                __text_size__ = SIZEOF (.text)
-                0x0000000000006d68                __text_load_end__ = __text_end__
+                0x0000000000006d4c       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/heapops_basic_v7em_little.a(heapops_basic.o)
+                0x0000000000006d4c                __SEGGER_RTL_init_heap
+                0x0000000000006d60                . = ALIGN (MAX ((__text_start__ + 0x4), .), 0x4)
+                0x0000000000006d60                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x0000000000006994                __text_size__ = SIZEOF (.text)
+                0x0000000000006d60                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -5854,80 +5844,80 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .text is too large to fit in FLASH1 memory segment)
-                0x0000000000006d68                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
+                0x0000000000006d60                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
 
 .log_const_data
-                0x0000000000006d68       0x30
-                0x0000000000006d68                __log_const_data_start__ = .
-                0x0000000000006d68                __start_log_const_data = __log_const_data_start__
+                0x0000000000006d60       0x30
+                0x0000000000006d60                __log_const_data_start__ = .
+                0x0000000000006d60                __start_log_const_data = __log_const_data_start__
  *(SORT_BY_NAME(.log_const_data*))
  .log_const_data_PRS
-                0x0000000000006d68        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_prs.o
-                0x0000000000006d68                m_nrf_log_PRS_logs_data_const
+                0x0000000000006d60        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_prs.o
+                0x0000000000006d60                m_nrf_log_PRS_logs_data_const
  .log_const_data_TIMER
-                0x0000000000006d70        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
-                0x0000000000006d70                m_nrf_log_TIMER_logs_data_const
+                0x0000000000006d68        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
+                0x0000000000006d68                m_nrf_log_TIMER_logs_data_const
  .log_const_data_TWIM
-                0x0000000000006d78        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
-                0x0000000000006d78                m_nrf_log_TWIM_logs_data_const
+                0x0000000000006d70        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
+                0x0000000000006d70                m_nrf_log_TWIM_logs_data_const
  .log_const_data_UART
-                0x0000000000006d80        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
-                0x0000000000006d80                m_nrf_log_UART_logs_data_const
+                0x0000000000006d78        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
+                0x0000000000006d78                m_nrf_log_UART_logs_data_const
  .log_const_data_UARTE
-                0x0000000000006d88        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
-                0x0000000000006d88                m_nrf_log_UARTE_logs_data_const
+                0x0000000000006d80        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
+                0x0000000000006d80                m_nrf_log_UARTE_logs_data_const
  .log_const_data_app
-                0x0000000000006d90        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
-                0x0000000000006d90                m_nrf_log_app_logs_data_const
-                0x0000000000006d98                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
+                0x0000000000006d88        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+                0x0000000000006d88                m_nrf_log_app_logs_data_const
+                0x0000000000006d90                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
                 0x0000000000000030                __log_const_data_size__ = SIZEOF (.log_const_data)
-                0x0000000000006d98                __stop_log_const_data = __log_const_data_end__
-                0x0000000000006d98                __log_const_data_load_end__ = __log_const_data_end__
+                0x0000000000006d90                __stop_log_const_data = __log_const_data_end__
+                0x0000000000006d90                __log_const_data_load_end__ = __log_const_data_end__
                 0x0000000000000001                . = ASSERT (((__log_const_data_start__ == __log_const_data_end__) || ((__log_const_data_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_const_data is too large to fit in FLASH1 memory segment)
-                0x0000000000006d98                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
+                0x0000000000006d90                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
 
-.log_backends   0x0000000000006d98       0x10
-                0x0000000000006d98                __log_backends_start__ = .
-                0x0000000000006d98                __start_log_backends = __log_backends_start__
+.log_backends   0x0000000000006d90       0x10
+                0x0000000000006d90                __log_backends_start__ = .
+                0x0000000000006d90                __start_log_backends = __log_backends_start__
  *(SORT_BY_NAME(.log_backends*))
- .log_backends  0x0000000000006d98       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
-                0x0000000000006da8                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
+ .log_backends  0x0000000000006d90       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
+                0x0000000000006da0                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
                 0x0000000000000010                __log_backends_size__ = SIZEOF (.log_backends)
-                0x0000000000006da8                __stop_log_backends = __log_backends_end__
-                0x0000000000006da8                __log_backends_load_end__ = __log_backends_end__
+                0x0000000000006da0                __stop_log_backends = __log_backends_end__
+                0x0000000000006da0                __log_backends_load_end__ = __log_backends_end__
                 0x0000000000000001                . = ASSERT (((__log_backends_start__ == __log_backends_end__) || ((__log_backends_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_backends is too large to fit in FLASH1 memory segment)
-                0x0000000000006da8                __nrf_balloc_load_start__ = ALIGN (__log_backends_end__, 0x4)
+                0x0000000000006da0                __nrf_balloc_load_start__ = ALIGN (__log_backends_end__, 0x4)
 
-.nrf_balloc     0x0000000000006da8       0x14
-                0x0000000000006da8                __nrf_balloc_start__ = .
-                0x0000000000006da8                __start_nrf_balloc = __nrf_balloc_start__
+.nrf_balloc     0x0000000000006da0       0x14
+                0x0000000000006da0                __nrf_balloc_start__ = .
+                0x0000000000006da0                __start_nrf_balloc = __nrf_balloc_start__
  *(.nrf_balloc*)
- .nrf_balloc    0x0000000000006da8       0x14 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
-                0x0000000000006da8                log_mempool
-                0x0000000000006dbc                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
+ .nrf_balloc    0x0000000000006da0       0x14 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+                0x0000000000006da0                log_mempool
+                0x0000000000006db4                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
                 0x0000000000000014                __nrf_balloc_size__ = SIZEOF (.nrf_balloc)
-                0x0000000000006dbc                __stop_nrf_balloc = __nrf_balloc_end__
-                0x0000000000006dbc                __nrf_balloc_load_end__ = __nrf_balloc_end__
+                0x0000000000006db4                __stop_nrf_balloc = __nrf_balloc_end__
+                0x0000000000006db4                __nrf_balloc_load_end__ = __nrf_balloc_end__
                 0x0000000000000001                . = ASSERT (((__nrf_balloc_start__ == __nrf_balloc_end__) || ((__nrf_balloc_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .nrf_balloc is too large to fit in FLASH1 memory segment)
-                0x0000000000006dbc                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
+                0x0000000000006db4                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
 
-.nrf_sections   0x0000000000006dbc        0x0
-                0x0000000000006dbc                __nrf_sections_start__ = .
-                0x0000000000006dbc                __start_nrf_sections = __nrf_sections_start__
+.nrf_sections   0x0000000000006db4        0x0
+                0x0000000000006db4                __nrf_sections_start__ = .
+                0x0000000000006db4                __start_nrf_sections = __nrf_sections_start__
  *(.nrf_sections .nrf_sections.*)
-                0x0000000000006dbc                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
+                0x0000000000006db4                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
                 0x0000000000000000                __nrf_sections_size__ = SIZEOF (.nrf_sections)
-                0x0000000000006dbc                __nrf_sections_load_end__ = __nrf_sections_end__
+                0x0000000000006db4                __nrf_sections_load_end__ = __nrf_sections_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_start__ == __nrf_sections_end__) || ((__nrf_sections_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .nrf_sections is too large to fit in FLASH1 memory segment)
-                0x0000000000006dbc                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
+                0x0000000000006db4                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
 
 .log_dynamic_data
-                0x0000000020000000        0x0 load address 0x0000000000006dbc
+                0x0000000020000000        0x0 load address 0x0000000000006db4
                 0x0000000020000000                __log_dynamic_data_start__ = .
  *(SORT_BY_NAME(.log_dynamic_data*))
                 0x0000000020000000                __log_dynamic_data_end__ = (__log_dynamic_data_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000000                __log_dynamic_data_size__ = SIZEOF (.log_dynamic_data)
-                0x0000000000006dbc                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
+                0x0000000000006db4                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_load_start__ == __log_dynamic_data_load_end__) || ((__log_dynamic_data_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_dynamic_data is too large to fit in FLASH1 memory segment)
 
 .log_dynamic_data_run
@@ -5939,15 +5929,15 @@ Linker script and memory map
                 0x0000000020000000                __stop_log_dynamic_data = __log_dynamic_data_run_end__
                 0x0000000020000000                __log_dynamic_data_run_load_end__ = __log_dynamic_data_run_end__
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_run_start__ == __log_dynamic_data_run_end__) || ((__log_dynamic_data_run_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .log_dynamic_data_run is too large to fit in RAM1 memory segment)
-                0x0000000000006dbc                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
+                0x0000000000006db4                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
 
 .log_filter_data
-                0x0000000020000000        0x0 load address 0x0000000000006dbc
+                0x0000000020000000        0x0 load address 0x0000000000006db4
                 0x0000000020000000                __log_filter_data_start__ = .
  *(SORT_BY_NAME(.log_filter_data*))
                 0x0000000020000000                __log_filter_data_end__ = (__log_filter_data_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000000                __log_filter_data_size__ = SIZEOF (.log_filter_data)
-                0x0000000000006dbc                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
+                0x0000000000006db4                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000001                . = ASSERT (((__log_filter_data_load_start__ == __log_filter_data_load_end__) || ((__log_filter_data_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_filter_data is too large to fit in FLASH1 memory segment)
 
 .log_filter_data_run
@@ -5970,67 +5960,67 @@ Linker script and memory map
                 0x0000000000000000                __nrf_sections_run_end_size__ = SIZEOF (.nrf_sections_run_end)
                 0x0000000020000000                __nrf_sections_run_end_load_end__ = __nrf_sections_run_end_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_run_end_start__ == __nrf_sections_run_end_end__) || ((__nrf_sections_run_end_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .nrf_sections_run_end is too large to fit in RAM1 memory segment)
-                0x0000000000006dbc                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
+                0x0000000000006db4                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
 
-.dtors          0x0000000000006dbc        0x0
-                0x0000000000006dbc                __dtors_start__ = .
+.dtors          0x0000000000006db4        0x0
+                0x0000000000006db4                __dtors_start__ = .
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000000006dbc                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x0000000000006db4                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x0000000000006dbc                __dtors_load_end__ = __dtors_end__
+                0x0000000000006db4                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .dtors is too large to fit in FLASH1 memory segment)
-                0x0000000000006dbc                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x0000000000006db4                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x0000000000006dbc        0x0
-                0x0000000000006dbc                __ctors_start__ = .
+.ctors          0x0000000000006db4        0x0
+                0x0000000000006db4                __ctors_start__ = .
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT_BY_NAME(.init_array.*))
-                0x0000000000006dbc                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x0000000000006db4                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x0000000000006dbc                __ctors_load_end__ = __ctors_end__
+                0x0000000000006db4                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .ctors is too large to fit in FLASH1 memory segment)
-                0x0000000000006dbc                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x0000000000006db4                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x0000000000006dbc     0x1150
-                0x0000000000006dbc                __rodata_start__ = .
+.rodata         0x0000000000006db4     0x1158
+                0x0000000000006db4                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000000006dbc       0x94 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
+ .rodata        0x0000000000006db4       0x94 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
  .rodata.nrf_log_backend_uart_api
-                0x0000000000006e50        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
-                0x0000000000006e50                nrf_log_backend_uart_api
- .rodata        0x0000000000006e5c       0x8b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
- *fill*         0x0000000000006ee7        0x1 
+                0x0000000000006e48        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
+                0x0000000000006e48                nrf_log_backend_uart_api
+ .rodata        0x0000000000006e54       0x8b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
+ *fill*         0x0000000000006edf        0x1 
  .rodata.m_log_push_ringbuf
-                0x0000000000006ee8        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
- .rodata        0x0000000000006ef4       0x85 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
- *fill*         0x0000000000006f79        0x3 
- .rodata        0x0000000000006f7c       0xaa Output/Debug/Obj/twi_sensor_pca10040/nrf_log_str_formatter.o
- *fill*         0x0000000000007026        0x2 
- .rodata        0x0000000000007028       0x70 Output/Debug/Obj/twi_sensor_pca10040/app_error_weak.o
- .rodata        0x0000000000007098       0x6d Output/Debug/Obj/twi_sensor_pca10040/app_util_platform.o
- *fill*         0x0000000000007105        0x3 
- .rodata        0x0000000000007108       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_balloc.o
- .rodata        0x0000000000007170       0x5e Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf.o
- *fill*         0x00000000000071ce        0x2 
- .rodata        0x00000000000071d0       0x65 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
- *fill*         0x0000000000007235        0x3 
+                0x0000000000006ee0        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+ .rodata        0x0000000000006eec       0x85 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+ *fill*         0x0000000000006f71        0x3 
+ .rodata        0x0000000000006f74       0xaa Output/Debug/Obj/twi_sensor_pca10040/nrf_log_str_formatter.o
+ *fill*         0x000000000000701e        0x2 
+ .rodata        0x0000000000007020       0x70 Output/Debug/Obj/twi_sensor_pca10040/app_error_weak.o
+ .rodata        0x0000000000007090       0x6d Output/Debug/Obj/twi_sensor_pca10040/app_util_platform.o
+ *fill*         0x00000000000070fd        0x3 
+ .rodata        0x0000000000007100       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_balloc.o
+ .rodata        0x0000000000007168       0x5e Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf.o
+ *fill*         0x00000000000071c6        0x2 
+ .rodata        0x00000000000071c8       0x65 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
+ *fill*         0x000000000000722d        0x3 
  .rodata._aV2C.0
-                0x0000000000007238       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
- .rodata        0x0000000000007248       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_memobj.o
+                0x0000000000007230       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
+ .rodata        0x0000000000007240       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_memobj.o
  .rodata.m_unknown_str
-                0x00000000000072b0       0x13 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- *fill*         0x00000000000072c3        0x1 
- .rodata        0x00000000000072c4      0x3bd Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- *fill*         0x0000000000007681        0x3 
+                0x00000000000072a8       0x13 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ *fill*         0x00000000000072bb        0x1 
+ .rodata        0x00000000000072bc      0x3bd Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ *fill*         0x0000000000007679        0x3 
  .rodata.nrf_strerror_array
-                0x0000000000007684      0x118 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- .rodata        0x000000000000779c       0x2e Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
- *fill*         0x00000000000077ca        0x6 
+                0x000000000000767c      0x118 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ .rodata        0x0000000000007794       0x2e Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
+ *fill*         0x00000000000077c2        0xe 
  .rodata.delay_machine_code.0
                 0x00000000000077d0        0x6 Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
  *fill*         0x00000000000077d6        0x2 
@@ -6102,7 +6092,7 @@ Linker script and memory map
                 0x0000000000007f0c                . = ALIGN (MAX ((__rodata_start__ + 0x4), .), 0x4)
  *fill*         0x0000000000007f09        0x3 
                 0x0000000000007f0c                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x0000000000001150                __rodata_size__ = SIZEOF (.rodata)
+                0x0000000000001158                __rodata_size__ = SIZEOF (.rodata)
                 0x0000000000007f0c                __rodata_load_end__ = __rodata_end__
 
 .rel.dyn        0x0000000000007f0c        0x0
@@ -6467,7 +6457,7 @@ LOAD linker stubs
  .note.GNU-stack
                 0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
 
-.debug_line     0x0000000000000000    0x14164
+.debug_line     0x0000000000000000    0x14035
  .debug_line    0x0000000000000000      0x17d Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_line    0x000000000000017d      0x75b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_line    0x00000000000008d8      0xa08 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6495,12 +6485,12 @@ LOAD linker stubs
  .debug_line    0x000000000000d234      0xf09 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_line    0x000000000000e13d      0xa9e Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_line    0x000000000000ebdb      0x810 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_line    0x000000000000f3eb      0xa47 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_line    0x000000000000fe32       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_line    0x000000000000fed4       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_line    0x000000000000ff98     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_line    0x000000000000f3eb      0x918 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_line    0x000000000000fd03       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_line    0x000000000000fda5       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_line    0x000000000000fe69     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_info     0x0000000000000000    0x16975
+.debug_info     0x0000000000000000    0x16866
  .debug_info    0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_info    0x0000000000000022      0x6dc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_info    0x00000000000006fe     0x1099 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6528,12 +6518,12 @@ LOAD linker stubs
  .debug_info    0x000000000000f2f9     0x147d Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_info    0x0000000000010776      0x964 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_info    0x00000000000110da      0xf45 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_info    0x000000000001201f      0x5e1 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_info    0x0000000000012600       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_info    0x0000000000012623       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_info    0x0000000000012646     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_info    0x000000000001201f      0x4d2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_info    0x00000000000124f1       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_info    0x0000000000012514       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_info    0x0000000000012537     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_abbrev   0x0000000000000000     0x3bdb
+.debug_abbrev   0x0000000000000000     0x3bcc
  .debug_abbrev  0x0000000000000000       0x12 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_abbrev  0x0000000000000012      0x1d3 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_abbrev  0x00000000000001e5      0x2d9 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6561,12 +6551,12 @@ LOAD linker stubs
  .debug_abbrev  0x0000000000002f38      0x302 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_abbrev  0x000000000000323a      0x2a4 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_abbrev  0x00000000000034de      0x285 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_abbrev  0x0000000000003763      0x1d1 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_abbrev  0x0000000000003934       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_abbrev  0x0000000000003948       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_abbrev  0x000000000000395c      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_abbrev  0x0000000000003763      0x1c2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_abbrev  0x0000000000003925       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_abbrev  0x0000000000003939       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_abbrev  0x000000000000394d      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_aranges  0x0000000000000000     0x1b18
+.debug_aranges  0x0000000000000000     0x1af0
  .debug_aranges
                 0x0000000000000000       0x50 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_aranges
@@ -6622,15 +6612,15 @@ LOAD linker stubs
  .debug_aranges
                 0x0000000000000db0       0x68 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .debug_aranges
-                0x0000000000000e18       0x90 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000000e18       0x68 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_aranges
-                0x0000000000000ea8       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+                0x0000000000000e80       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
  .debug_aranges
-                0x0000000000000ec8       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+                0x0000000000000ea0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
  .debug_aranges
-                0x0000000000000ee8      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000000ec0      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_str      0x0000000000000000    0x87fa6
+.debug_str      0x0000000000000000    0x87f73
  .debug_str     0x0000000000000000       0xcd Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_str     0x00000000000000cd    0x6e108 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
                                       0x6ef6d (size before relaxing)
@@ -6680,20 +6670,20 @@ LOAD linker stubs
                                       0x73412 (size before relaxing)
  .debug_str     0x000000000007a7f7     0x1032 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
                                       0x72ebc (size before relaxing)
- .debug_str     0x000000000007b829     0x18f1 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_str     0x000000000007b829     0x18e5 Output/Debug/Obj/twi_sensor_pca10040/main.o
                                       0x75063 (size before relaxing)
- .debug_str     0x000000000007d11a      0x13f Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_str     0x000000000007d10e      0x13f Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
                                       0x70150 (size before relaxing)
- .debug_str     0x000000000007d259     0x1193 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                                      0x6fd6c (size before relaxing)
- .debug_str     0x000000000007e3ec       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_str     0x000000000007d24d     0x116c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                                      0x6fd40 (size before relaxing)
+ .debug_str     0x000000000007e3b9       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
                                          0xe1 (size before relaxing)
- .debug_str     0x000000000007e450       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_str     0x000000000007e41d       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
                                          0xe6 (size before relaxing)
- .debug_str     0x000000000007e4b9     0x9aed Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_str     0x000000000007e486     0x9aed Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
                                       0x69d47 (size before relaxing)
 
-.debug_ranges   0x0000000000000000     0x1910
+.debug_ranges   0x0000000000000000     0x18e8
  .debug_ranges  0x0000000000000000       0x48 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_ranges  0x0000000000000048       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_ranges  0x0000000000000058       0x50 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6721,10 +6711,10 @@ LOAD linker stubs
  .debug_ranges  0x0000000000000a98      0x148 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_ranges  0x0000000000000be0       0x38 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_ranges  0x0000000000000c18       0x58 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_ranges  0x0000000000000c70       0x80 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_ranges  0x0000000000000cf0      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_ranges  0x0000000000000c70       0x58 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_ranges  0x0000000000000cc8      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_frame    0x0000000000000000     0x57d8
+.debug_frame    0x0000000000000000     0x56f8
  .debug_frame   0x0000000000000000       0x38 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_frame   0x0000000000000038      0x16c Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
  .debug_frame   0x00000000000001a4       0x58 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
@@ -6751,11 +6741,11 @@ LOAD linker stubs
  .debug_frame   0x0000000000002ddc      0x5b0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_frame   0x000000000000338c       0xf8 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_frame   0x0000000000003484      0x1a0 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_frame   0x0000000000003624      0x274 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_frame   0x0000000000003898     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_frame   0x0000000000003624      0x194 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_frame   0x00000000000037b8     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubnames
-                0x0000000000000000     0x76ba
+                0x0000000000000000     0x764a
  .debug_pubnames
                 0x0000000000000000       0xab Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_pubnames
@@ -6809,9 +6799,9 @@ LOAD linker stubs
  .debug_pubnames
                 0x0000000000005308      0x299 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .debug_pubnames
-                0x00000000000055a1      0x244 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000055a1      0x1d4 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_pubnames
-                0x00000000000057e5     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000005775     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubtypes
                 0x0000000000000000     0x3808
