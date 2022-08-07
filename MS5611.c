@@ -20,12 +20,12 @@
 
 typedef struct
 {
-  uint16_t psens;     // c1 
-  uint16_t off;       // c2
-  uint16_t tcs;       // c3
-  uint16_t tco;       // c4
-  uint16_t tref;      // c5
-  uint16_t tsens;     // c6
+  uint16_t psens;
+  uint16_t off;
+  uint16_t tcs;
+  uint16_t tco;
+  uint16_t tref;
+  uint16_t tsens;
 } CalReg;
 
 static uint8_t devAddr;
@@ -40,104 +40,15 @@ static int32_t  tempCache;
 //static uint32_t lastConv=0;
 static int32_t tempDeltaT;
 
-bool ms5611Init(void)
+
+
+/**
+ * Send a reset command to the device. With the reset command the device
+ * populates its internal registers with the values read from the PROM.
+ */
+void ms5611Reset()
 {
-  if (isInit)
-    return true;
-
-  devAddr = MS5611_ADDR_CSB_LOW;
-
-  ms5611Reset(); // reset the device to populate its internal PROM registers
-  nrf_delay_ms(5);
-  if (ms5611ReadPROM() == false) // reads the PROM into object variables for later use
-  {
-      return false;
-  }
-
-  isInit = true;
-
-  return true;
-}
-
-
-/* acquires temperature and pressure : take in pointer and manipulate. no output required */
-void ms5611GetSensorData(float* result_array)
-{
-    // formulas in datasheet page 7 
-    int32_t raw_pressure = ms5611RawPressure(devAddr);
-    int32_t raw_temperature = ms5611RawTemperature(devAddr); 
-    int32_t dT, result_temperature, result_pressure;
-
-    // dT = D2 - C5 * 2^8     :  Difference between actual and reference temp 
-    dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
-
-    // 2000 + dT * C6 / 2^23  :  Actual temperature 
-    result_temperature = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
-    
-    
-
-
-    return; 
-}
-
-int32_t ms5611RawPressure(uint8_t osr)
-{
-  uint32_t now = ms_ticks;
-  if (lastPresConv != 0 && (now - lastPresConv) >= CONVERSION_TIME_MS)
-  {
-    lastPresConv = 0;
-    return ms5611GetConversion(MS5611_D1 + osr);
-  }
-  else
-  {
-    if (lastPresConv == 0 && lastTempConv == 0)
-    {
-      ms5611StartConversion(MS5611_D1 + osr);
-      lastPresConv = now;
-    }
-    return 0;
-  }
-}
-
-int32_t ms5611RawTemperature(uint8_t osr)
-{
-  uint32_t now = ms_ticks;
-  if (lastTempConv != 0 && (now - lastTempConv) >= CONVERSION_TIME_MS)
-  {
-    lastTempConv = 0;
-    return ms5611GetConversion(MS5611_D2 + osr);
-  }
-  else
-  {
-    if (lastTempConv == 0 && lastPresConv == 0)
-    {
-      ms5611StartConversion(MS5611_D2 + osr);
-      lastTempConv = now;
-    }
-    return tempCache;
-  }
-}
-
-// see page 11 of the datasheet
-void ms5611StartConversion(uint8_t command)
-{
-  // initialize pressure conversion
-  i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, command);
-}
-
-int32_t ms5611GetConversion(uint8_t command)
-{
-  int32_t conversion = 0;
-  uint8_t buffer[MS5611_D1D2_SIZE];
-
-  // start read sequence
-  i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, 0);
-  // Read conversion
-  i2cdev_readBytes(devAddr, I2CDEV_NO_MEM_ADDR, MS5611_D1D2_SIZE, buffer);
-  conversion = ((int32_t)buffer[0] << 16) |
-               ((int32_t)buffer[1] << 8) | buffer[2];
-
-  return conversion;
+    i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, MS5611_RESET);
 }
 
 /**
@@ -166,15 +77,110 @@ bool ms5611ReadPROM()
   return status;
 }
 
-/**
- * Send a reset command to the device. With the reset command the device
- * populates its internal registers with the values read from the PROM.
- */
-void ms5611Reset()
+
+
+
+bool ms5611Init(void)
 {
-    i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, MS5611_RESET);
+  if (isInit)
+    return true;
+
+  devAddr = MS5611_ADDR_CSB_LOW;
+
+  ms5611Reset(); // reset the device to populate its internal PROM registers
+  nrf_delay_ms(5);
+  if (ms5611ReadPROM() == false) // reads the PROM into object variables for later use
+  {
+      return false;
+  }
+
+  isInit = true;
+
+  return true;
 }
 
+// see page 11 of the datasheet
+void ms5611StartConversion(uint8_t command)
+{
+  // initialize pressure conversion
+  i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, command);
+}
+
+int32_t ms5611GetConversion(uint8_t command)
+{
+  int32_t conversion = 0;
+  uint8_t buffer[MS5611_D1D2_SIZE];
+
+  // start read sequence
+  i2cdev_writeByte(devAddr, I2CDEV_NO_MEM_ADDR, 0);
+  // Read conversion
+  i2cdev_readBytes(devAddr, I2CDEV_NO_MEM_ADDR, MS5611_D1D2_SIZE, buffer);
+  conversion = ((int32_t)buffer[0] << 16) |
+               ((int32_t)buffer[1] << 8) | buffer[2];
+
+  return conversion;
+}
+
+
+int32_t ms5611RawPressure(uint8_t osr)
+{
+  uint32_t now = ms_ticks;
+  if (lastPresConv != 0 && (now - lastPresConv) >= CONVERSION_TIME_MS)
+  {
+    lastPresConv = 0;
+    return ms5611GetConversion(MS5611_D1 + osr);
+  }
+  else
+  {
+    if (lastPresConv == 0 && lastTempConv == 0)
+    {
+      ms5611StartConversion(MS5611_D1 + osr);
+      lastPresConv = now;
+    }
+    return 0;
+  }
+}
+
+int32_t ms5611RawTemperature(uint8_t osr)
+{
+  uint32_t now = ms_ticks;
+  if (lastTempConv != 0 && (now - lastTempConv) >= CONVERSION_TIME_MS)
+  {
+    lastTempConv = 0;
+    tempCache = ms5611GetConversion(MS5611_D2 + osr);
+    return tempCache;
+  }
+  else
+  {
+    if (lastTempConv == 0 && lastPresConv == 0)
+    {
+      ms5611StartConversion(MS5611_D2 + osr);
+      lastTempConv = now;
+    }
+    return tempCache;
+  }
+}
+
+
+/* acquires temperature and pressure : take in pointer and manipulate. no output required */
+void ms5611GetSensorData(float* result_array)
+{
+    // formulas in datasheet page 7 
+    int32_t raw_pressure = ms5611RawPressure(devAddr);
+    int32_t raw_temperature = ms5611RawTemperature(devAddr); 
+    int32_t dT, result_temperature, result_pressure;
+
+    // dT = D2 - C5 * 2^8     :  Difference between actual and reference temp 
+    dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
+
+    // 2000 + dT * C6 / 2^23  :  Actual temperature 
+    result_temperature = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
+    
+    
+
+
+    return; 
+}
 
 
 

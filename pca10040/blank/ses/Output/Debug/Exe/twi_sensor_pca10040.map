@@ -2703,15 +2703,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .data          0x0000000000000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .bss           0x0000000000000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_info    0x0000000000000000       0x68 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_abbrev  0x0000000000000000       0x2c Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_pubnames
-                0x0000000000000000       0x12 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_pubtypes
-                0x0000000000000000       0xb5 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_aranges
-                0x0000000000000000       0x18 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_macro   0x0000000000000000      0x28d Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_macro   0x0000000000000000      0xb68 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_macro   0x0000000000000000      0x99a Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_macro   0x0000000000000000      0x25d Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
@@ -2754,11 +2745,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_macro   0x0000000000000000       0x10 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_macro   0x0000000000000000       0x94 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_line    0x0000000000000000      0x67f Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .debug_str     0x0000000000000000    0x6f2a5 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .comment       0x0000000000000000       0x36 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
- .ARM.attributes
-                0x0000000000000000       0x36 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .group         0x0000000000000000        0xc Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .group         0x0000000000000000        0xc Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .group         0x0000000000000000        0xc Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
@@ -2903,10 +2889,10 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .bss.tempDeltaT
                 0x0000000000000000        0x4 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .text.ms5611GetSensorData
-                0x0000000000000000       0x7c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .text.ms5611RawPressure
                 0x0000000000000000       0x78 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .text.ms5611GetSensorData
+                0x0000000000000000       0x7c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_macro   0x0000000000000000      0xb68 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_macro   0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_macro   0x0000000000000000      0x25d Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
@@ -5053,7 +5039,7 @@ Linker script and memory map
                 0x0000000000000001                . = ASSERT (((__init_rodata_start__ == __init_rodata_end__) || ((__init_rodata_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .init_rodata is too large to fit in FLASH1 memory segment)
                 0x00000000000003cc                __text_load_start__ = ALIGN (__init_rodata_end__, 0x4)
 
-.text           0x00000000000003cc     0x6994
+.text           0x00000000000003cc     0x6998
                 0x00000000000003cc                __text_start__ = .
  *(.text .text.* .gnu.linkonce.t.* .glue_7t .glue_7 .gcc_except_table .ARM.extab* .gnu.linkonce.armextab.*)
  .glue_7        0x00000000000003cc        0x0 linker stubs
@@ -5696,144 +5682,144 @@ Linker script and memory map
  .text.TIMER0_IRQHandler
                 0x0000000000005c20       0x18 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
                 0x0000000000005c20                TIMER0_IRQHandler
+ .text.main     0x0000000000005c38       0xc4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000005c38                main
  .text.nrf_timer_frequency_get
-                0x0000000000005c38       0x12 Output/Debug/Obj/twi_sensor_pca10040/main.o
- *fill*         0x0000000000005c4a        0x2 
+                0x0000000000005cfc       0x12 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ *fill*         0x0000000000005d0e        0x2 
  .text.nrf_timer_ms_to_ticks
-                0x0000000000005c4c       0xb8 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000005d10       0xb8 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .text.nrfx_timer_ms_to_ticks
-                0x0000000000005d04       0x26 Output/Debug/Obj/twi_sensor_pca10040/main.o
- *fill*         0x0000000000005d2a        0x2 
+                0x0000000000005dc8       0x26 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ *fill*         0x0000000000005dee        0x2 
  .text.timer0_handler
-                0x0000000000005d2c       0x2c Output/Debug/Obj/twi_sensor_pca10040/main.o
-                0x0000000000005d2c                timer0_handler
+                0x0000000000005df0       0x2c Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+                0x0000000000005df0                timer0_handler
  .text.hw_timer_init
-                0x0000000000005d58       0x74 Output/Debug/Obj/twi_sensor_pca10040/main.o
-                0x0000000000005d58                hw_timer_init
- .text.main     0x0000000000005dcc       0xd0 Output/Debug/Obj/twi_sensor_pca10040/main.o
-                0x0000000000005dcc                main
+                0x0000000000005e1c       0x7c Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+                0x0000000000005e1c                hw_timer_init
  .text.nrf_drv_twi_enable
-                0x0000000000005e9c       0x18 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005e98       0x18 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .text.nrf_drv_twi_disable
-                0x0000000000005eb4       0x18 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005eb0       0x18 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .text.nrf_drv_twi_tx
-                0x0000000000005ecc       0x40 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005ec8       0x40 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .text.nrf_drv_twi_rx
-                0x0000000000005f0c       0x38 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005f08       0x38 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .text.i2cdev_initialize
-                0x0000000000005f44       0x58 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
-                0x0000000000005f44                i2cdev_initialize
+                0x0000000000005f40       0x58 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005f40                i2cdev_initialize
  .text.i2cdev_enable
-                0x0000000000005f9c       0x2c Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
-                0x0000000000005f9c                i2cdev_enable
+                0x0000000000005f98       0x2c Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005f98                i2cdev_enable
  .text.i2cdev_readBytes
-                0x0000000000005fc8       0x60 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
-                0x0000000000005fc8                i2cdev_readBytes
+                0x0000000000005fc4       0x60 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000005fc4                i2cdev_readBytes
  .text.i2cdev_writeByte
-                0x0000000000006028       0x78 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
-                0x0000000000006028                i2cdev_writeByte
+                0x0000000000006024       0x78 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000006024                i2cdev_writeByte
  .text.nrfx_coredep_delay_us
-                0x00000000000060a0       0x30 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x000000000000609c       0x30 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .text.nrf_delay_ms
-                0x00000000000060d0       0x2a Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- *fill*         0x00000000000060fa        0x2 
- .text.ms5611Init
-                0x00000000000060fc       0x48 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000060fc                ms5611Init
- .text.ms5611RawTemperature
-                0x0000000000006144       0x7c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x0000000000006144                ms5611RawTemperature
- .text.ms5611StartConversion
-                0x00000000000061c0       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000061c0                ms5611StartConversion
- .text.ms5611GetConversion
-                0x00000000000061e8       0x50 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000061e8                ms5611GetConversion
- .text.ms5611ReadPROM
-                0x0000000000006238       0x98 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x0000000000006238                ms5611ReadPROM
+                0x00000000000060cc       0x2a Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ *fill*         0x00000000000060f6        0x2 
  .text.ms5611Reset
-                0x00000000000062d0       0x18 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
-                0x00000000000062d0                ms5611Reset
+                0x00000000000060f8       0x18 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000060f8                ms5611Reset
+ .text.ms5611ReadPROM
+                0x0000000000006110       0x98 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000006110                ms5611ReadPROM
+ .text.ms5611Init
+                0x00000000000061a8       0x48 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000061a8                ms5611Init
+ .text.ms5611StartConversion
+                0x00000000000061f0       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x00000000000061f0                ms5611StartConversion
+ .text.ms5611GetConversion
+                0x0000000000006218       0x50 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000006218                ms5611GetConversion
+ .text.ms5611RawTemperature
+                0x0000000000006268       0x84 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000006268                ms5611RawTemperature
  .text.__NVIC_SystemReset
-                0x00000000000062e8       0x28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000062ec       0x28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_12
-                0x0000000000006310       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006314       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_16
-                0x0000000000006398       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000639c       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_31
-                0x0000000000006400       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006404       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_32
-                0x0000000000006488       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000648c       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_36
-                0x00000000000064f0       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000064f4       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_37
-                0x0000000000006578       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000657c       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_57
-                0x00000000000065e0       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000065e4       0x68 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_66
-                0x0000000000006648       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000664c       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_108
-                0x00000000000066d0       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000066d4       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_136
-                0x0000000000006758       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x000000000000675c       0x88 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_182
-                0x00000000000067e0       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000067e4       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_errata_249
-                0x0000000000006840       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006844       0x60 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nrf52_handle_approtect
-                0x00000000000068a0       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068a4       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .text.nvmc_wait
-                0x00000000000068c0       0x18 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x00000000000068c0                nvmc_wait
+                0x00000000000068c4       0x18 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068c4                nvmc_wait
  .text.nvmc_config
-                0x00000000000068d8       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x00000000000068d8                nvmc_config
+                0x00000000000068dc       0x20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068dc                nvmc_config
  .text.SystemCoreClockUpdate
-                0x00000000000068f8       0x14 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x00000000000068f8                SystemCoreClockUpdate
+                0x00000000000068fc       0x14 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000068fc                SystemCoreClockUpdate
  .text.SystemInit
-                0x000000000000690c      0x2ac Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
-                0x000000000000690c                SystemInit
+                0x0000000000006910      0x2ac Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000006910                SystemInit
  .text.libc.__SEGGER_RTL_ascii_mbtowc
-                0x0000000000006bb8       0x2e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006bb8                __SEGGER_RTL_ascii_mbtowc
+                0x0000000000006bbc       0x2e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006bbc                __SEGGER_RTL_ascii_mbtowc
  .text.libc.__SEGGER_RTL_ascii_wctomb
-                0x0000000000006be6        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006be6                __SEGGER_RTL_ascii_wctomb
+                0x0000000000006bea        0xe C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006bea                __SEGGER_RTL_ascii_wctomb
  .text.libc.__SEGGER_RTL_isctype
-                0x0000000000006bf4       0x1e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006bf8       0x1e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.isprint
-                0x0000000000006c12        0x6 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000006c12                isprint
+                0x0000000000006c16        0x6 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c16                isprint
  .text.libc.__SEGGER_RTL_ascii_isctype
-                0x0000000000006c18       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c1c       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_toupper
-                0x0000000000006c38        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c3c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_tolower
-                0x0000000000006c44        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c48        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_iswctype
-                0x0000000000006c50       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c54       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_towupper
-                0x0000000000006c70        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c74        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.__SEGGER_RTL_ascii_towlower
-                0x0000000000006c7c        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000006c80        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .text.libc.strlen
-                0x0000000000006c88       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
-                0x0000000000006c88                strlen
+                0x0000000000006c8c       0x60 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
+                0x0000000000006c8c                strlen
  .text.libc.memcpy
-                0x0000000000006ce8       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
-                0x0000000000006ce8                __aeabi_memcpy
-                0x0000000000006ce8                memcpy
-                0x0000000000006d0a                __aeabi_memcpy8
-                0x0000000000006d0a                __aeabi_memcpy4
+                0x0000000000006cec       0x64 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
+                0x0000000000006cec                __aeabi_memcpy
+                0x0000000000006cec                memcpy
+                0x0000000000006d0e                __aeabi_memcpy8
+                0x0000000000006d0e                __aeabi_memcpy4
  .text.__SEGGER_RTL_init_heap
-                0x0000000000006d4c       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/heapops_basic_v7em_little.a(heapops_basic.o)
-                0x0000000000006d4c                __SEGGER_RTL_init_heap
-                0x0000000000006d60                . = ALIGN (MAX ((__text_start__ + 0x4), .), 0x4)
-                0x0000000000006d60                __text_end__ = (__text_start__ + SIZEOF (.text))
-                0x0000000000006994                __text_size__ = SIZEOF (.text)
-                0x0000000000006d60                __text_load_end__ = __text_end__
+                0x0000000000006d50       0x14 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/heapops_basic_v7em_little.a(heapops_basic.o)
+                0x0000000000006d50                __SEGGER_RTL_init_heap
+                0x0000000000006d64                . = ALIGN (MAX ((__text_start__ + 0x4), .), 0x4)
+                0x0000000000006d64                __text_end__ = (__text_start__ + SIZEOF (.text))
+                0x0000000000006998                __text_size__ = SIZEOF (.text)
+                0x0000000000006d64                __text_load_end__ = __text_end__
 
 .vfp11_veneer   0x0000000100000000        0x0
  .vfp11_veneer  0x0000000100000000        0x0 linker stubs
@@ -5844,80 +5830,80 @@ Linker script and memory map
 .iplt           0x0000000100000000        0x0
  .iplt          0x0000000100000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__text_start__ == __text_end__) || ((__text_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .text is too large to fit in FLASH1 memory segment)
-                0x0000000000006d60                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
+                0x0000000000006d64                __log_const_data_load_start__ = ALIGN (__text_end__, 0x4)
 
 .log_const_data
-                0x0000000000006d60       0x30
-                0x0000000000006d60                __log_const_data_start__ = .
-                0x0000000000006d60                __start_log_const_data = __log_const_data_start__
+                0x0000000000006d64       0x30
+                0x0000000000006d64                __log_const_data_start__ = .
+                0x0000000000006d64                __start_log_const_data = __log_const_data_start__
  *(SORT_BY_NAME(.log_const_data*))
  .log_const_data_PRS
-                0x0000000000006d60        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_prs.o
-                0x0000000000006d60                m_nrf_log_PRS_logs_data_const
+                0x0000000000006d64        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_prs.o
+                0x0000000000006d64                m_nrf_log_PRS_logs_data_const
  .log_const_data_TIMER
-                0x0000000000006d68        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
-                0x0000000000006d68                m_nrf_log_TIMER_logs_data_const
+                0x0000000000006d6c        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
+                0x0000000000006d6c                m_nrf_log_TIMER_logs_data_const
  .log_const_data_TWIM
-                0x0000000000006d70        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
-                0x0000000000006d70                m_nrf_log_TWIM_logs_data_const
+                0x0000000000006d74        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_twim.o
+                0x0000000000006d74                m_nrf_log_TWIM_logs_data_const
  .log_const_data_UART
-                0x0000000000006d78        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
-                0x0000000000006d78                m_nrf_log_UART_logs_data_const
+                0x0000000000006d7c        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
+                0x0000000000006d7c                m_nrf_log_UART_logs_data_const
  .log_const_data_UARTE
-                0x0000000000006d80        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
-                0x0000000000006d80                m_nrf_log_UARTE_logs_data_const
+                0x0000000000006d84        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
+                0x0000000000006d84                m_nrf_log_UARTE_logs_data_const
  .log_const_data_app
-                0x0000000000006d88        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
-                0x0000000000006d88                m_nrf_log_app_logs_data_const
-                0x0000000000006d90                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
+                0x0000000000006d8c        0x8 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+                0x0000000000006d8c                m_nrf_log_app_logs_data_const
+                0x0000000000006d94                __log_const_data_end__ = (__log_const_data_start__ + SIZEOF (.log_const_data))
                 0x0000000000000030                __log_const_data_size__ = SIZEOF (.log_const_data)
-                0x0000000000006d90                __stop_log_const_data = __log_const_data_end__
-                0x0000000000006d90                __log_const_data_load_end__ = __log_const_data_end__
+                0x0000000000006d94                __stop_log_const_data = __log_const_data_end__
+                0x0000000000006d94                __log_const_data_load_end__ = __log_const_data_end__
                 0x0000000000000001                . = ASSERT (((__log_const_data_start__ == __log_const_data_end__) || ((__log_const_data_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_const_data is too large to fit in FLASH1 memory segment)
-                0x0000000000006d90                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
+                0x0000000000006d94                __log_backends_load_start__ = ALIGN (__log_const_data_end__, 0x4)
 
-.log_backends   0x0000000000006d90       0x10
-                0x0000000000006d90                __log_backends_start__ = .
-                0x0000000000006d90                __start_log_backends = __log_backends_start__
+.log_backends   0x0000000000006d94       0x10
+                0x0000000000006d94                __log_backends_start__ = .
+                0x0000000000006d94                __start_log_backends = __log_backends_start__
  *(SORT_BY_NAME(.log_backends*))
- .log_backends  0x0000000000006d90       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
-                0x0000000000006da0                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
+ .log_backends  0x0000000000006d94       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
+                0x0000000000006da4                __log_backends_end__ = (__log_backends_start__ + SIZEOF (.log_backends))
                 0x0000000000000010                __log_backends_size__ = SIZEOF (.log_backends)
-                0x0000000000006da0                __stop_log_backends = __log_backends_end__
-                0x0000000000006da0                __log_backends_load_end__ = __log_backends_end__
+                0x0000000000006da4                __stop_log_backends = __log_backends_end__
+                0x0000000000006da4                __log_backends_load_end__ = __log_backends_end__
                 0x0000000000000001                . = ASSERT (((__log_backends_start__ == __log_backends_end__) || ((__log_backends_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_backends is too large to fit in FLASH1 memory segment)
-                0x0000000000006da0                __nrf_balloc_load_start__ = ALIGN (__log_backends_end__, 0x4)
+                0x0000000000006da4                __nrf_balloc_load_start__ = ALIGN (__log_backends_end__, 0x4)
 
-.nrf_balloc     0x0000000000006da0       0x14
-                0x0000000000006da0                __nrf_balloc_start__ = .
-                0x0000000000006da0                __start_nrf_balloc = __nrf_balloc_start__
+.nrf_balloc     0x0000000000006da4       0x14
+                0x0000000000006da4                __nrf_balloc_start__ = .
+                0x0000000000006da4                __start_nrf_balloc = __nrf_balloc_start__
  *(.nrf_balloc*)
- .nrf_balloc    0x0000000000006da0       0x14 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
-                0x0000000000006da0                log_mempool
-                0x0000000000006db4                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
+ .nrf_balloc    0x0000000000006da4       0x14 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+                0x0000000000006da4                log_mempool
+                0x0000000000006db8                __nrf_balloc_end__ = (__nrf_balloc_start__ + SIZEOF (.nrf_balloc))
                 0x0000000000000014                __nrf_balloc_size__ = SIZEOF (.nrf_balloc)
-                0x0000000000006db4                __stop_nrf_balloc = __nrf_balloc_end__
-                0x0000000000006db4                __nrf_balloc_load_end__ = __nrf_balloc_end__
+                0x0000000000006db8                __stop_nrf_balloc = __nrf_balloc_end__
+                0x0000000000006db8                __nrf_balloc_load_end__ = __nrf_balloc_end__
                 0x0000000000000001                . = ASSERT (((__nrf_balloc_start__ == __nrf_balloc_end__) || ((__nrf_balloc_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .nrf_balloc is too large to fit in FLASH1 memory segment)
-                0x0000000000006db4                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
+                0x0000000000006db8                __nrf_sections_load_start__ = ALIGN (__nrf_balloc_end__, 0x4)
 
-.nrf_sections   0x0000000000006db4        0x0
-                0x0000000000006db4                __nrf_sections_start__ = .
-                0x0000000000006db4                __start_nrf_sections = __nrf_sections_start__
+.nrf_sections   0x0000000000006db8        0x0
+                0x0000000000006db8                __nrf_sections_start__ = .
+                0x0000000000006db8                __start_nrf_sections = __nrf_sections_start__
  *(.nrf_sections .nrf_sections.*)
-                0x0000000000006db4                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
+                0x0000000000006db8                __nrf_sections_end__ = (__nrf_sections_start__ + SIZEOF (.nrf_sections))
                 0x0000000000000000                __nrf_sections_size__ = SIZEOF (.nrf_sections)
-                0x0000000000006db4                __nrf_sections_load_end__ = __nrf_sections_end__
+                0x0000000000006db8                __nrf_sections_load_end__ = __nrf_sections_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_start__ == __nrf_sections_end__) || ((__nrf_sections_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .nrf_sections is too large to fit in FLASH1 memory segment)
-                0x0000000000006db4                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
+                0x0000000000006db8                __log_dynamic_data_load_start__ = ALIGN (__nrf_sections_end__, 0x4)
 
 .log_dynamic_data
-                0x0000000020000000        0x0 load address 0x0000000000006db4
+                0x0000000020000000        0x0 load address 0x0000000000006db8
                 0x0000000020000000                __log_dynamic_data_start__ = .
  *(SORT_BY_NAME(.log_dynamic_data*))
                 0x0000000020000000                __log_dynamic_data_end__ = (__log_dynamic_data_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000000                __log_dynamic_data_size__ = SIZEOF (.log_dynamic_data)
-                0x0000000000006db4                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
+                0x0000000000006db8                __log_dynamic_data_load_end__ = (__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data))
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_load_start__ == __log_dynamic_data_load_end__) || ((__log_dynamic_data_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_dynamic_data is too large to fit in FLASH1 memory segment)
 
 .log_dynamic_data_run
@@ -5929,15 +5915,15 @@ Linker script and memory map
                 0x0000000020000000                __stop_log_dynamic_data = __log_dynamic_data_run_end__
                 0x0000000020000000                __log_dynamic_data_run_load_end__ = __log_dynamic_data_run_end__
                 0x0000000000000001                . = ASSERT (((__log_dynamic_data_run_start__ == __log_dynamic_data_run_end__) || ((__log_dynamic_data_run_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .log_dynamic_data_run is too large to fit in RAM1 memory segment)
-                0x0000000000006db4                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
+                0x0000000000006db8                __log_filter_data_load_start__ = ALIGN ((__log_dynamic_data_load_start__ + SIZEOF (.log_dynamic_data)), 0x4)
 
 .log_filter_data
-                0x0000000020000000        0x0 load address 0x0000000000006db4
+                0x0000000020000000        0x0 load address 0x0000000000006db8
                 0x0000000020000000                __log_filter_data_start__ = .
  *(SORT_BY_NAME(.log_filter_data*))
                 0x0000000020000000                __log_filter_data_end__ = (__log_filter_data_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000000                __log_filter_data_size__ = SIZEOF (.log_filter_data)
-                0x0000000000006db4                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
+                0x0000000000006db8                __log_filter_data_load_end__ = (__log_filter_data_load_start__ + SIZEOF (.log_filter_data))
                 0x0000000000000001                . = ASSERT (((__log_filter_data_load_start__ == __log_filter_data_load_end__) || ((__log_filter_data_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .log_filter_data is too large to fit in FLASH1 memory segment)
 
 .log_filter_data_run
@@ -5960,67 +5946,67 @@ Linker script and memory map
                 0x0000000000000000                __nrf_sections_run_end_size__ = SIZEOF (.nrf_sections_run_end)
                 0x0000000020000000                __nrf_sections_run_end_load_end__ = __nrf_sections_run_end_end__
                 0x0000000000000001                . = ASSERT (((__nrf_sections_run_end_start__ == __nrf_sections_run_end_end__) || ((__nrf_sections_run_end_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .nrf_sections_run_end is too large to fit in RAM1 memory segment)
-                0x0000000000006db4                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
+                0x0000000000006db8                __dtors_load_start__ = ALIGN ((__log_filter_data_load_start__ + SIZEOF (.log_filter_data)), 0x4)
 
-.dtors          0x0000000000006db4        0x0
-                0x0000000000006db4                __dtors_start__ = .
+.dtors          0x0000000000006db8        0x0
+                0x0000000000006db8                __dtors_start__ = .
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.fini_array)
  *(SORT_BY_NAME(.fini_array.*))
-                0x0000000000006db4                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
+                0x0000000000006db8                __dtors_end__ = (__dtors_start__ + SIZEOF (.dtors))
                 0x0000000000000000                __dtors_size__ = SIZEOF (.dtors)
-                0x0000000000006db4                __dtors_load_end__ = __dtors_end__
+                0x0000000000006db8                __dtors_load_end__ = __dtors_end__
                 0x0000000000000001                . = ASSERT (((__dtors_start__ == __dtors_end__) || ((__dtors_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .dtors is too large to fit in FLASH1 memory segment)
-                0x0000000000006db4                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
+                0x0000000000006db8                __ctors_load_start__ = ALIGN (__dtors_end__, 0x4)
 
-.ctors          0x0000000000006db4        0x0
-                0x0000000000006db4                __ctors_start__ = .
+.ctors          0x0000000000006db8        0x0
+                0x0000000000006db8                __ctors_start__ = .
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
  *(.init_array)
  *(SORT_BY_NAME(.init_array.*))
-                0x0000000000006db4                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
+                0x0000000000006db8                __ctors_end__ = (__ctors_start__ + SIZEOF (.ctors))
                 0x0000000000000000                __ctors_size__ = SIZEOF (.ctors)
-                0x0000000000006db4                __ctors_load_end__ = __ctors_end__
+                0x0000000000006db8                __ctors_load_end__ = __ctors_end__
                 0x0000000000000001                . = ASSERT (((__ctors_start__ == __ctors_end__) || ((__ctors_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .ctors is too large to fit in FLASH1 memory segment)
-                0x0000000000006db4                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
+                0x0000000000006db8                __rodata_load_start__ = ALIGN (__ctors_end__, 0x4)
 
-.rodata         0x0000000000006db4     0x1158
-                0x0000000000006db4                __rodata_start__ = .
+.rodata         0x0000000000006db8     0x11d4
+                0x0000000000006db8                __rodata_start__ = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000000006db4       0x94 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
+ .rodata        0x0000000000006db8       0x94 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
  .rodata.nrf_log_backend_uart_api
-                0x0000000000006e48        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
-                0x0000000000006e48                nrf_log_backend_uart_api
- .rodata        0x0000000000006e54       0x8b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
- *fill*         0x0000000000006edf        0x1 
+                0x0000000000006e4c        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
+                0x0000000000006e4c                nrf_log_backend_uart_api
+ .rodata        0x0000000000006e58       0x8b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
+ *fill*         0x0000000000006ee3        0x1 
  .rodata.m_log_push_ringbuf
-                0x0000000000006ee0        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
- .rodata        0x0000000000006eec       0x85 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
- *fill*         0x0000000000006f71        0x3 
- .rodata        0x0000000000006f74       0xaa Output/Debug/Obj/twi_sensor_pca10040/nrf_log_str_formatter.o
- *fill*         0x000000000000701e        0x2 
- .rodata        0x0000000000007020       0x70 Output/Debug/Obj/twi_sensor_pca10040/app_error_weak.o
- .rodata        0x0000000000007090       0x6d Output/Debug/Obj/twi_sensor_pca10040/app_util_platform.o
- *fill*         0x00000000000070fd        0x3 
- .rodata        0x0000000000007100       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_balloc.o
- .rodata        0x0000000000007168       0x5e Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf.o
- *fill*         0x00000000000071c6        0x2 
- .rodata        0x00000000000071c8       0x65 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
- *fill*         0x000000000000722d        0x3 
+                0x0000000000006ee4        0xc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+ .rodata        0x0000000000006ef0       0x85 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_frontend.o
+ *fill*         0x0000000000006f75        0x3 
+ .rodata        0x0000000000006f78       0xaa Output/Debug/Obj/twi_sensor_pca10040/nrf_log_str_formatter.o
+ *fill*         0x0000000000007022        0x2 
+ .rodata        0x0000000000007024       0x70 Output/Debug/Obj/twi_sensor_pca10040/app_error_weak.o
+ .rodata        0x0000000000007094       0x6d Output/Debug/Obj/twi_sensor_pca10040/app_util_platform.o
+ *fill*         0x0000000000007101        0x3 
+ .rodata        0x0000000000007104       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_balloc.o
+ .rodata        0x000000000000716c       0x5e Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf.o
+ *fill*         0x00000000000071ca        0x2 
+ .rodata        0x00000000000071cc       0x65 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
+ *fill*         0x0000000000007231        0x3 
  .rodata._aV2C.0
-                0x0000000000007230       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
- .rodata        0x0000000000007240       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_memobj.o
+                0x0000000000007234       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_fprintf_format.o
+ .rodata        0x0000000000007244       0x68 Output/Debug/Obj/twi_sensor_pca10040/nrf_memobj.o
  .rodata.m_unknown_str
-                0x00000000000072a8       0x13 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- *fill*         0x00000000000072bb        0x1 
- .rodata        0x00000000000072bc      0x3bd Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- *fill*         0x0000000000007679        0x3 
+                0x00000000000072ac       0x13 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ *fill*         0x00000000000072bf        0x1 
+ .rodata        0x00000000000072c0      0x3bd Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ *fill*         0x000000000000767d        0x3 
  .rodata.nrf_strerror_array
-                0x000000000000767c      0x118 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
- .rodata        0x0000000000007794       0x2e Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
- *fill*         0x00000000000077c2        0xe 
+                0x0000000000007680      0x118 Output/Debug/Obj/twi_sensor_pca10040/nrf_strerror.o
+ .rodata        0x0000000000007798       0x2e Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
+ *fill*         0x00000000000077c6        0xa 
  .rodata.delay_machine_code.0
                 0x00000000000077d0        0x6 Output/Debug/Obj/twi_sensor_pca10040/nrf_drv_twi.o
  *fill*         0x00000000000077d6        0x2 
@@ -6038,85 +6024,87 @@ Linker script and memory map
                 0x0000000000007ab4        0x4 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .rodata        0x0000000000007ab8       0x9d Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  *fill*         0x0000000000007b55        0x3 
- .rodata        0x0000000000007b58       0xff Output/Debug/Obj/twi_sensor_pca10040/main.o
- *fill*         0x0000000000007c57        0x1 
+ .rodata        0x0000000000007b58       0xcf Output/Debug/Obj/twi_sensor_pca10040/main.o
+ *fill*         0x0000000000007c27        0x1 
+ .rodata        0x0000000000007c28       0xaa Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ *fill*         0x0000000000007cd2        0x2 
  .rodata.HW_TIMER_INSTANCE
-                0x0000000000007c58        0x8 Output/Debug/Obj/twi_sensor_pca10040/main.o
-                0x0000000000007c58                HW_TIMER_INSTANCE
- .rodata        0x0000000000007c60       0x78 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- *fill*         0x0000000000007cd8        0x8 
+                0x0000000000007cd4        0x8 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+                0x0000000000007cd4                HW_TIMER_INSTANCE
+ .rodata        0x0000000000007cdc       0x78 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ *fill*         0x0000000000007d54        0xc 
  .rodata.delay_machine_code.0
-                0x0000000000007ce0        0x6 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- *fill*         0x0000000000007ce6        0x2 
+                0x0000000000007d60        0x6 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ *fill*         0x0000000000007d66        0x2 
  .rodata.libc.__SEGGER_RTL_c_locale
-                0x0000000000007ce8        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007ce8                __SEGGER_RTL_c_locale
+                0x0000000000007d68        0xc C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007d68                __SEGGER_RTL_c_locale
  .rodata.libc..L.str
-                0x0000000000007cf4        0x2 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
- *fill*         0x0000000000007cf6        0x2 
+                0x0000000000007d74        0x2 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+ *fill*         0x0000000000007d76        0x2 
  .rodata.libc.__SEGGER_RTL_codeset_ascii
-                0x0000000000007cf8       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007cf8                __SEGGER_RTL_codeset_ascii
+                0x0000000000007d78       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007d78                __SEGGER_RTL_codeset_ascii
  .rodata.libc.__SEGGER_RTL_c_locale_abbrev_day_names
-                0x0000000000007d18       0x1d C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007d18                __SEGGER_RTL_c_locale_abbrev_day_names
+                0x0000000000007d98       0x1d C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007d98                __SEGGER_RTL_c_locale_abbrev_day_names
  .rodata.libc.__SEGGER_RTL_c_locale_abbrev_month_names
-                0x0000000000007d35       0x31 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007d35                __SEGGER_RTL_c_locale_abbrev_month_names
+                0x0000000000007db5       0x31 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007db5                __SEGGER_RTL_c_locale_abbrev_month_names
  .rodata.libc.__SEGGER_RTL_data_utf8_period
-                0x0000000000007d66        0x2 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007d66                __SEGGER_RTL_data_utf8_period
+                0x0000000000007de6        0x2 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007de6                __SEGGER_RTL_data_utf8_period
  .rodata.libc.__SEGGER_RTL_data_empty_string
-                0x0000000000007d68        0x1 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007d68                __SEGGER_RTL_data_empty_string
+                0x0000000000007de8        0x1 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007de8                __SEGGER_RTL_data_empty_string
  .rodata.libc.__SEGGER_RTL_c_locale_day_names
-                0x0000000000007d69       0x3a C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007de9       0x3a C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_c_locale_month_names
-                0x0000000000007da3       0x57 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007e23       0x57 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_c_locale_am_pm_indicator
-                0x0000000000007dfa        0x7 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007e7a        0x7 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_c_locale_date_format
-                0x0000000000007e01        0x9 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007e81        0x9 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_c_locale_time_format
-                0x0000000000007e0a        0x9 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007e8a        0x9 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_c_locale_date_time_format
-                0x0000000000007e13        0xf C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
- *fill*         0x0000000000007e22        0x2 
+                0x0000000000007e93        0xf C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+ *fill*         0x0000000000007ea2        0x2 
  .rodata.libc.__SEGGER_RTL_c_locale_data
-                0x0000000000007e24       0x58 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007e24                __SEGGER_RTL_c_locale_data
+                0x0000000000007ea4       0x58 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007ea4                __SEGGER_RTL_c_locale_data
  .rodata.libc.__SEGGER_RTL_ascii_ctype_map
-                0x0000000000007e7c       0x80 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007efc       0x80 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
  .rodata.libc.__SEGGER_RTL_ascii_ctype_mask
-                0x0000000000007efc        0xd C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
-                0x0000000000007f0c                . = ALIGN (MAX ((__rodata_start__ + 0x4), .), 0x4)
- *fill*         0x0000000000007f09        0x3 
-                0x0000000000007f0c                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
-                0x0000000000001158                __rodata_size__ = SIZEOF (.rodata)
-                0x0000000000007f0c                __rodata_load_end__ = __rodata_end__
+                0x0000000000007f7c        0xd C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000007f8c                . = ALIGN (MAX ((__rodata_start__ + 0x4), .), 0x4)
+ *fill*         0x0000000000007f89        0x3 
+                0x0000000000007f8c                __rodata_end__ = (__rodata_start__ + SIZEOF (.rodata))
+                0x00000000000011d4                __rodata_size__ = SIZEOF (.rodata)
+                0x0000000000007f8c                __rodata_load_end__ = __rodata_end__
 
-.rel.dyn        0x0000000000007f0c        0x0
- .rel.iplt      0x0000000000007f0c        0x0 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
+.rel.dyn        0x0000000000007f8c        0x0
+ .rel.iplt      0x0000000000007f8c        0x0 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
                 0x0000000000000001                . = ASSERT (((__rodata_start__ == __rodata_end__) || ((__rodata_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .rodata is too large to fit in FLASH1 memory segment)
-                0x0000000000007f0c                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
+                0x0000000000007f8c                __ARM.exidx_load_start__ = ALIGN (__rodata_end__, 0x4)
 
-.ARM.exidx      0x0000000000007f0c        0x0
-                0x0000000000007f0c                __ARM.exidx_start__ = .
-                0x0000000000007f0c                __exidx_start = __ARM.exidx_start__
+.ARM.exidx      0x0000000000007f8c        0x0
+                0x0000000000007f8c                __ARM.exidx_start__ = .
+                0x0000000000007f8c                __exidx_start = __ARM.exidx_start__
  *(.ARM.exidx .ARM.exidx.*)
-                0x0000000000007f0c                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
+                0x0000000000007f8c                __ARM.exidx_end__ = (__ARM.exidx_start__ + SIZEOF (.ARM.exidx))
                 0x0000000000000000                __ARM.exidx_size__ = SIZEOF (.ARM.exidx)
-                0x0000000000007f0c                __exidx_end = __ARM.exidx_end__
-                0x0000000000007f0c                __ARM.exidx_load_end__ = __ARM.exidx_end__
+                0x0000000000007f8c                __exidx_end = __ARM.exidx_end__
+                0x0000000000007f8c                __ARM.exidx_load_end__ = __ARM.exidx_end__
                 0x0000000000000001                . = ASSERT (((__ARM.exidx_start__ == __ARM.exidx_end__) || ((__ARM.exidx_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .ARM.exidx is too large to fit in FLASH1 memory segment)
-                0x0000000000007f0c                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
+                0x0000000000007f8c                __fast_load_start__ = ALIGN (__ARM.exidx_end__, 0x4)
 
-.fast           0x0000000020000000        0x0 load address 0x0000000000007f0c
+.fast           0x0000000020000000        0x0 load address 0x0000000000007f8c
                 0x0000000020000000                __fast_start__ = .
  *(.fast .fast.*)
                 0x0000000020000000                __fast_end__ = (__fast_start__ + SIZEOF (.fast))
                 0x0000000000000000                __fast_size__ = SIZEOF (.fast)
-                0x0000000000007f0c                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
+                0x0000000000007f8c                __fast_load_end__ = (__fast_load_start__ + SIZEOF (.fast))
                 0x0000000000000001                . = ASSERT (((__fast_load_start__ == __fast_load_end__) || ((__fast_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .fast is too large to fit in FLASH1 memory segment)
 
 .fast_run       0x0000000020000000        0x0
@@ -6125,9 +6113,9 @@ Linker script and memory map
                 0x0000000000000000                __fast_run_size__ = (__fast_run_end__ - __fast_run_start__)
                 0x0000000020000000                __fast_run_load_end__ = __fast_run_end__
                 0x0000000000000001                . = ASSERT (((__fast_run_start__ == __fast_run_end__) || ((__fast_run_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .fast_run is too large to fit in RAM1 memory segment)
-                0x0000000000007f0c                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
+                0x0000000000007f8c                __data_load_start__ = ALIGN ((__fast_load_start__ + SIZEOF (.fast)), 0x4)
 
-.data           0x0000000020000000       0x80 load address 0x0000000000007f0c
+.data           0x0000000020000000       0x80 load address 0x0000000000007f8c
                 0x0000000020000000                __data_start__ = .
  *(.data .data.* .gnu.linkonce.d.*)
  .data.m_uart   0x0000000020000000       0x14 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6150,7 +6138,7 @@ Linker script and memory map
                 0x000000002000006c                __RAL_global_locale
                 0x0000000020000080                __data_end__ = (__data_start__ + SIZEOF (.data))
                 0x0000000000000080                __data_size__ = SIZEOF (.data)
-                0x0000000000007f8c                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
+                0x000000000000800c                __data_load_end__ = (__data_load_start__ + SIZEOF (.data))
 
 .igot.plt       0x0000000100000000        0x0
  .igot.plt      0x0000000100000000        0x0 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
@@ -6162,16 +6150,16 @@ Linker script and memory map
                 0x0000000000000080                __data_run_size__ = (__data_run_end__ - __data_run_start__)
                 0x0000000020000080                __data_run_load_end__ = __data_run_end__
                 0x0000000000000001                . = ASSERT (((__data_run_start__ == __data_run_end__) || ((__data_run_end__ - __RAM1_segment_start__) <= __RAM1_segment_size__)), error: .data_run is too large to fit in RAM1 memory segment)
-                0x0000000000007f8c                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
+                0x000000000000800c                __tdata_load_start__ = ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4)
 
-.tdata          0x0000000020000080        0x0 load address 0x0000000000007f8c
+.tdata          0x0000000020000080        0x0 load address 0x000000000000800c
                 0x0000000020000080                __tdata_start__ = .
  *(.tdata .tdata.*)
                 0x0000000020000080                __tdata_end__ = (__tdata_start__ + SIZEOF (.tdata))
                 0x0000000000000000                __tdata_size__ = SIZEOF (.tdata)
-                0x0000000000007f8c                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
-                0x0000000000007f8c                __FLASH1_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
-                0x0000000000007f8c                __FLASH1_segment_used_size__ = (__FLASH1_segment_used_end__ - __FLASH1_segment_start__)
+                0x000000000000800c                __tdata_load_end__ = (__tdata_load_start__ + SIZEOF (.tdata))
+                0x000000000000800c                __FLASH1_segment_used_end__ = (ALIGN ((__data_load_start__ + SIZEOF (.data)), 0x4) + SIZEOF (.tdata))
+                0x000000000000800c                __FLASH1_segment_used_size__ = (__FLASH1_segment_used_end__ - __FLASH1_segment_start__)
                 0x0000000000000001                . = ASSERT (((__tdata_load_start__ == __tdata_load_end__) || ((__tdata_load_end__ - __FLASH1_segment_start__) <= __FLASH1_segment_size__)), error: .tdata is too large to fit in FLASH1 memory segment)
 
 .tdata_run      0x0000000020000080        0x0
@@ -6226,7 +6214,7 @@ Linker script and memory map
  .bss.m_cb      0x00000000200006c8       0x2c Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .bss.m_cb      0x00000000200006f4       0x24 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .bss.m_cb      0x0000000020000718        0xc Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .bss.ms_ticks  0x0000000020000724        0x4 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .bss.ms_ticks  0x0000000020000724        0x4 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
                 0x0000000020000724                ms_ticks
  .bss.devAddr   0x0000000020000728        0x1 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .bss.isInit    0x0000000020000729        0x1 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
@@ -6404,19 +6392,21 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000000000000530       0x36 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .ARM.attributes
-                0x0000000000000566       0x36 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000000566       0x36 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .ARM.attributes
-                0x000000000000059c       0x36 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x000000000000059c       0x36 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .ARM.attributes
-                0x00000000000005d2       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+                0x00000000000005d2       0x36 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .ARM.attributes
-                0x00000000000005f2       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+                0x0000000000000608       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
  .ARM.attributes
-                0x0000000000000612       0x36 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000000628       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
  .ARM.attributes
-                0x0000000000000648       0x3e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+                0x0000000000000648       0x36 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
  .ARM.attributes
-                0x0000000000000686       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
+                0x000000000000067e       0x3e C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
+ .ARM.attributes
+                0x00000000000006bc       0x20 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(strasmops_arm.o)
 
 .comment        0x0000000000000000       0x6c
  .comment       0x0000000000000000       0x35 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
@@ -6445,6 +6435,7 @@ LOAD linker stubs
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .comment       0x0000000000000035       0x36 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
@@ -6457,7 +6448,7 @@ LOAD linker stubs
  .note.GNU-stack
                 0x0000000000000000        0x0 C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/lib/libc_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a(mbops.o)
 
-.debug_line     0x0000000000000000    0x14035
+.debug_line     0x0000000000000000    0x146c1
  .debug_line    0x0000000000000000      0x17d Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_line    0x000000000000017d      0x75b Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_line    0x00000000000008d8      0xa08 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6483,14 +6474,15 @@ LOAD linker stubs
  .debug_line    0x000000000000aaa7     0x13ea Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_line    0x000000000000be91     0x13a3 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_line    0x000000000000d234      0xf09 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_line    0x000000000000e13d      0xa9e Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_line    0x000000000000ebdb      0x810 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_line    0x000000000000f3eb      0x918 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_line    0x000000000000fd03       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_line    0x000000000000fda5       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_line    0x000000000000fe69     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_line    0x000000000000e13d      0x9f1 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_line    0x000000000000eb2e      0x734 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_line    0x000000000000f262      0x810 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_line    0x000000000000fa72      0x91d Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_line    0x000000000001038f       0xa2 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_line    0x0000000000010431       0xc4 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_line    0x00000000000104f5     0x41cc Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_info     0x0000000000000000    0x16866
+.debug_info     0x0000000000000000    0x1693d
  .debug_info    0x0000000000000000       0x22 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_info    0x0000000000000022      0x6dc Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_info    0x00000000000006fe     0x1099 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6516,14 +6508,15 @@ LOAD linker stubs
  .debug_info    0x000000000000b4bc     0x1e7a Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_info    0x000000000000d336     0x1fc3 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_info    0x000000000000f2f9     0x147d Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_info    0x0000000000010776      0x964 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_info    0x00000000000110da      0xf45 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_info    0x000000000001201f      0x4d2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_info    0x00000000000124f1       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_info    0x0000000000012514       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_info    0x0000000000012537     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_info    0x0000000000010776      0x2c0 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_info    0x0000000000010a36      0x77b Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_info    0x00000000000111b1      0xf45 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_info    0x00000000000120f6      0x4d2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_info    0x00000000000125c8       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_info    0x00000000000125eb       0x23 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_info    0x000000000001260e     0x432f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_abbrev   0x0000000000000000     0x3bcc
+.debug_abbrev   0x0000000000000000     0x3cbe
  .debug_abbrev  0x0000000000000000       0x12 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_abbrev  0x0000000000000012      0x1d3 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_abbrev  0x00000000000001e5      0x2d9 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6549,14 +6542,15 @@ LOAD linker stubs
  .debug_abbrev  0x00000000000027d4      0x3ce Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_abbrev  0x0000000000002ba2      0x396 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_abbrev  0x0000000000002f38      0x302 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_abbrev  0x000000000000323a      0x2a4 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_abbrev  0x00000000000034de      0x285 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_abbrev  0x0000000000003763      0x1c2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_abbrev  0x0000000000003925       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
- .debug_abbrev  0x0000000000003939       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
- .debug_abbrev  0x000000000000394d      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_abbrev  0x000000000000323a      0x172 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_abbrev  0x00000000000033ac      0x224 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_abbrev  0x00000000000035d0      0x285 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_abbrev  0x0000000000003855      0x1c2 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_abbrev  0x0000000000003a17       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_abbrev  0x0000000000003a2b       0x14 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_abbrev  0x0000000000003a3f      0x27f Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_aranges  0x0000000000000000     0x1af0
+.debug_aranges  0x0000000000000000     0x1b08
  .debug_aranges
                 0x0000000000000000       0x50 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_aranges
@@ -6608,19 +6602,21 @@ LOAD linker stubs
  .debug_aranges
                 0x0000000000000c10      0x158 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_aranges
-                0x0000000000000d68       0x48 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000000d68       0x20 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_aranges
-                0x0000000000000db0       0x68 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000000d88       0x40 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_aranges
-                0x0000000000000e18       0x68 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000000dc8       0x68 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .debug_aranges
-                0x0000000000000e80       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+                0x0000000000000e30       0x68 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
  .debug_aranges
-                0x0000000000000ea0       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+                0x0000000000000e98       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
  .debug_aranges
-                0x0000000000000ec0      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x0000000000000eb8       0x20 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_aranges
+                0x0000000000000ed8      0xc30 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_str      0x0000000000000000    0x87f73
+.debug_str      0x0000000000000000    0x87ffa
  .debug_str     0x0000000000000000       0xcd Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_str     0x00000000000000cd    0x6e108 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
                                       0x6ef6d (size before relaxing)
@@ -6670,20 +6666,22 @@ LOAD linker stubs
                                       0x73412 (size before relaxing)
  .debug_str     0x000000000007a7f7     0x1032 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
                                       0x72ebc (size before relaxing)
- .debug_str     0x000000000007b829     0x18e5 Output/Debug/Obj/twi_sensor_pca10040/main.o
-                                      0x75063 (size before relaxing)
- .debug_str     0x000000000007d10e      0x13f Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_str     0x000000000007b829     0x1861 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                                      0x748e8 (size before relaxing)
+ .debug_str     0x000000000007d08a      0x10b Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+                                      0x6fa86 (size before relaxing)
+ .debug_str     0x000000000007d195      0x13f Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
                                       0x70150 (size before relaxing)
- .debug_str     0x000000000007d24d     0x116c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_str     0x000000000007d2d4     0x116c Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
                                       0x6fd40 (size before relaxing)
- .debug_str     0x000000000007e3b9       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
+ .debug_str     0x000000000007e440       0x64 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf52.o
                                          0xe1 (size before relaxing)
- .debug_str     0x000000000007e41d       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
+ .debug_str     0x000000000007e4a4       0x69 Output/Debug/Obj/twi_sensor_pca10040/ses_startup_nrf_common.o
                                          0xe6 (size before relaxing)
- .debug_str     0x000000000007e486     0x9aed Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_str     0x000000000007e50d     0x9aed Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
                                       0x69d47 (size before relaxing)
 
-.debug_ranges   0x0000000000000000     0x18e8
+.debug_ranges   0x0000000000000000     0x18f0
  .debug_ranges  0x0000000000000000       0x48 Output/Debug/Obj/twi_sensor_pca10040/thumb_crt0.o
  .debug_ranges  0x0000000000000048       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_ranges  0x0000000000000058       0x50 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
@@ -6709,12 +6707,13 @@ LOAD linker stubs
  .debug_ranges  0x00000000000006e8      0x1e0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_ranges  0x00000000000008c8      0x1d0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_ranges  0x0000000000000a98      0x148 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_ranges  0x0000000000000be0       0x38 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_ranges  0x0000000000000c18       0x58 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_ranges  0x0000000000000c70       0x58 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_ranges  0x0000000000000cc8      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_ranges  0x0000000000000be0       0x10 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_ranges  0x0000000000000bf0       0x30 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_ranges  0x0000000000000c20       0x58 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_ranges  0x0000000000000c78       0x58 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_ranges  0x0000000000000cd0      0xc20 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_frame    0x0000000000000000     0x56f8
+.debug_frame    0x0000000000000000     0x5708
  .debug_frame   0x0000000000000000       0x38 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_frame   0x0000000000000038      0x16c Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_uart.o
  .debug_frame   0x00000000000001a4       0x58 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_default_backends.o
@@ -6739,13 +6738,14 @@ LOAD linker stubs
  .debug_frame   0x0000000000001d70      0x870 Output/Debug/Obj/twi_sensor_pca10040/nrfx_uart.o
  .debug_frame   0x00000000000025e0      0x7fc Output/Debug/Obj/twi_sensor_pca10040/nrfx_uarte.o
  .debug_frame   0x0000000000002ddc      0x5b0 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_frame   0x000000000000338c       0xf8 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_frame   0x0000000000003484      0x1a0 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_frame   0x0000000000003624      0x194 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_frame   0x00000000000037b8     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_frame   0x000000000000338c       0x30 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_frame   0x00000000000033bc       0xd8 Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_frame   0x0000000000003494      0x1a0 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_frame   0x0000000000003634      0x194 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_frame   0x00000000000037c8     0x1f40 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubnames
-                0x0000000000000000     0x764a
+                0x0000000000000000     0x7684
  .debug_pubnames
                 0x0000000000000000       0xab Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_pubnames
@@ -6795,16 +6795,18 @@ LOAD linker stubs
  .debug_pubnames
                 0x00000000000044b2      0x845 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_pubnames
-                0x0000000000004cf7      0x611 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000004cf7      0x1ce Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_pubnames
-                0x0000000000005308      0x299 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000004ec5      0x47d Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_pubnames
-                0x00000000000055a1      0x1d4 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x0000000000005342      0x299 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .debug_pubnames
-                0x0000000000005775     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000055db      0x1d4 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_pubnames
+                0x00000000000057af     0x1ed5 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
 .debug_pubtypes
-                0x0000000000000000     0x3808
+                0x0000000000000000     0x38fb
  .debug_pubtypes
                 0x0000000000000000      0x277 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_pubtypes
@@ -6854,15 +6856,17 @@ LOAD linker stubs
  .debug_pubtypes
                 0x0000000000002d52      0x2c7 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_pubtypes
-                0x0000000000003019      0x260 Output/Debug/Obj/twi_sensor_pca10040/main.o
+                0x0000000000003019      0x147 Output/Debug/Obj/twi_sensor_pca10040/main.o
  .debug_pubtypes
-                0x0000000000003279      0x253 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+                0x0000000000003160      0x20c Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
  .debug_pubtypes
-                0x00000000000034cc      0x175 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+                0x000000000000336c      0x253 Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
  .debug_pubtypes
-                0x0000000000003641      0x1c7 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+                0x00000000000035bf      0x175 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_pubtypes
+                0x0000000000003734      0x1c7 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
 
-.debug_macro    0x0000000000000000     0x7887
+.debug_macro    0x0000000000000000     0x7b1e
  .debug_macro   0x0000000000000000      0x29e Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_macro   0x000000000000029e       0x28 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
  .debug_macro   0x00000000000002c6       0x52 Output/Debug/Obj/twi_sensor_pca10040/nrf_log_backend_serial.o
@@ -6940,26 +6944,27 @@ LOAD linker stubs
  .debug_macro   0x0000000000004db2      0x321 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_macro   0x00000000000050d3       0x22 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
  .debug_macro   0x00000000000050f5       0x10 Output/Debug/Obj/twi_sensor_pca10040/nrfx_timer.o
- .debug_macro   0x0000000000005105      0x3bd Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x00000000000054c2       0x5e Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x0000000000005520      0x17a Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x000000000000569a       0x10 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x00000000000056aa       0x40 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x00000000000056ea       0x94 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x000000000000577e       0x94 Output/Debug/Obj/twi_sensor_pca10040/main.o
- .debug_macro   0x0000000000005812      0x2de Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
- .debug_macro   0x0000000000005af0      0x30d Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000005dfd       0x3a Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000005e37       0x8e Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000005ec5       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000005eed       0x47 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000005f34      0x115 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000006049       0x11 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x000000000000605a       0x94 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x00000000000060ee       0xee Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x00000000000061dc       0x54 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
- .debug_macro   0x0000000000006230      0x15d Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x000000000000638d      0x44e Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x00000000000067db      0xa28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x0000000000007203      0x520 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
- .debug_macro   0x0000000000007723      0x164 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x0000000000005105      0x3c7 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x00000000000054cc       0x5e Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x000000000000552a      0x17a Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x00000000000056a4       0x10 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x00000000000056b4       0x40 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x00000000000056f4       0x94 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x0000000000005788       0x94 Output/Debug/Obj/twi_sensor_pca10040/main.o
+ .debug_macro   0x000000000000581c      0x28d Output/Debug/Obj/twi_sensor_pca10040/hw_timer.o
+ .debug_macro   0x0000000000005aa9      0x2de Output/Debug/Obj/twi_sensor_pca10040/i2cdev.o
+ .debug_macro   0x0000000000005d87      0x30d Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x0000000000006094       0x3a Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x00000000000060ce       0x8e Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x000000000000615c       0x28 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x0000000000006184       0x47 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x00000000000061cb      0x115 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x00000000000062e0       0x11 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x00000000000062f1       0x94 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x0000000000006385       0xee Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x0000000000006473       0x54 Output/Debug/Obj/twi_sensor_pca10040/ms5611.o
+ .debug_macro   0x00000000000064c7      0x15d Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x0000000000006624      0x44e Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x0000000000006a72      0xa28 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x000000000000749a      0x520 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o
+ .debug_macro   0x00000000000079ba      0x164 Output/Debug/Obj/twi_sensor_pca10040/system_nrf52.o

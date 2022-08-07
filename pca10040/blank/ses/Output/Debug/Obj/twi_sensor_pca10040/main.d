@@ -79,6 +79,7 @@ Output/Debug/Obj/twi_sensor_pca10040/main.o: \
  ../../../../../../components/libraries/log/nrf_log_default_backends.h \
  C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\i2cdev.h \
  C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\ms5611.h \
+ C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\hw_timer.h \
  ../../../../../../integration/nrfx/legacy/nrf_drv_timer.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_timer.h \
  ../../../../../../modules/nrfx/hal/nrf_timer.h
