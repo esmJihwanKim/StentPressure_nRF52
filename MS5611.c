@@ -162,6 +162,8 @@ int32_t ms5611RawTemperature(uint8_t osr)
 }
 
 
+// result_array[0] = temperature 
+// result_array[1] = pressure
 /* acquires temperature and pressure : take in pointer and manipulate. no output required */
 void ms5611GetSensorData(float* result_array)
 {
@@ -170,14 +172,25 @@ void ms5611GetSensorData(float* result_array)
     int32_t raw_temperature = ms5611RawTemperature(devAddr); 
     int32_t dT, result_temperature, result_pressure;
 
+    if(raw_pressure == 0 || raw_temperature == 0) 
+    {
+        NRF_LOG_INFO("ADC SAMPLING ERROR");
+    }
+
+    // page 8 & 9 
     // dT = D2 - C5 * 2^8     :  Difference between actual and reference temp 
     dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
 
     // 2000 + dT * C6 / 2^23  :  Actual temperature 
     result_temperature = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
     
+    //TODO: Second order temeperature compensation 
+    int64_t off = (((int64_t)calReg.off) << 16 ) + ((calReg.tco * dT) >> 7); 
+    int64_t sens = (((int64_t)calReg.psens) << 15) + ((calReg.tcs * dT) >> 8); 
     
-
+    if(raw_pressure != 0) 
+    {
+    }
 
     return; 
 }

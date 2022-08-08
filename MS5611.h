@@ -4,6 +4,9 @@
 
 #include <stdbool.h>
 #include "i2cdev.h"
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+#include "nrf_log_default_backends.h"
 
 #define I2CDEV_NO_MEM_ADDR  0xFF
 

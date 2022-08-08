@@ -8,9 +8,7 @@
 
 #include "nrf_delay.h"
 
-#include "nrf_log.h"
-#include "nrf_log_ctrl.h"
-#include "nrf_log_default_backends.h"
+
 
 #include "i2cdev.h"
 #include "ms5611.h"

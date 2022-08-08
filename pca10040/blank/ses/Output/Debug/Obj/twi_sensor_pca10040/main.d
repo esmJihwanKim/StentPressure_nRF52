@@ -56,6 +56,8 @@ Output/Debug/Obj/twi_sensor_pca10040/main.o: \
  ../../../../../../components/boards/pca10040.h \
  ../../../../../../components/libraries/util/app_error.h \
  ../../../../../../components/libraries/delay/nrf_delay.h \
+ C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\i2cdev.h \
+ C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\ms5611.h \
  ../../../../../../components/libraries/log/nrf_log.h \
  ../../../../../../components/libraries/util/sdk_common.h \
  C:/Users/WonResearchGroup/AppData/Local/SEGGER/SEGGER\ Embedded\ Studio/v3/packages/libraries/libcxx/include/string.h \
@@ -77,8 +79,6 @@ Output/Debug/Obj/twi_sensor_pca10040/main.o: \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.30/include/stdlib.h \
  ../../../../../../components/libraries/balloc/nrf_balloc.h \
  ../../../../../../components/libraries/log/nrf_log_default_backends.h \
- C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\i2cdev.h \
- C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\ms5611.h \
  C:\Users\WonResearchGroup\Desktop\Dev\Embedded\nRF5_SDK_17.1.0\examples\Won_Research_Group\StentPressure_nRF52\hw_timer.h \
  ../../../../../../integration/nrfx/legacy/nrf_drv_timer.h \
  ../../../../../../modules/nrfx/drivers/include/nrfx_timer.h \
