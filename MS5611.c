@@ -167,10 +167,10 @@ int32_t ms5611_get_raw_pressure(uint8_t osr)
 // result_array[0] = temperature 
 // result_array[1] = pressure
 /* acquires temperature and pressure : take in pointer and manipulate. no output required */
-void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pressure)
+void ms5611_get_calibrated_data(float* result_temperature, float* result_pressure)
 {
-    int32_t raw_pressure = ms5611_get_raw_pressure(MS5611_OSR_4096);
-    int32_t raw_temperature = ms5611_get_raw_temperature(MS5611_OSR_4096); 
+    int64_t raw_pressure = ms5611_get_raw_pressure(MS5611_OSR_4096);
+    int64_t raw_temperature = ms5611_get_raw_temperature(MS5611_OSR_4096); 
     // formulas in datasheet page 7 
     int32_t dT, temp, p;
     int64_t t2, p2, off2, sens2;
@@ -182,7 +182,7 @@ void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pre
 
     // page 8 & 9 
     // dT = D2 - C5 * 2^8     :  Difference between actual and reference temp 
-    dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
+    dT = raw_temperature - (((int64_t)calReg.tref) << 8); 
 
     // 2000 + dT * C6 / 2^23  :  Actual temperature 
     temp = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
@@ -192,8 +192,8 @@ void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pre
     
     p = (((raw_pressure * sens) >> 21) - off) >> 15; 
 
-    *result_temperature = (float)temp / 100; 
-    *result_pressure = (float)p / 100;
+    *result_temperature = (float)temp / 100.0; 
+    *result_pressure = (float)p / 100.0;
 
     return; 
 }

@@ -57,6 +57,6 @@ void ms5611Reset(void);
 void ms5611StartConversion(uint8_t command);
 int32_t ms5611GetConversion(uint8_t command);
 
-void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pressure);
+void ms5611_get_calibrated_data(float* result_temperature, float* result_pressure);
 
 #endif // MS5611_H
