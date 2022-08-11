@@ -35,6 +35,7 @@ static CalReg   calReg;
 static uint32_t lastPresConv;
 static uint32_t lastTempConv;
 static int32_t  tempCache;
+static int32_t  presCache; 
 
 //static uint8_t readState=0;
 //static uint32_t lastConv=0;
@@ -122,13 +123,35 @@ int32_t ms5611GetConversion(uint8_t command)
 }
 
 
-int32_t ms5611RawPressure(uint8_t osr)
+int32_t ms5611_get_raw_temperature(uint8_t osr)
+{
+    uint32_t now = ms_ticks;
+    if (lastTempConv != 0 && (now - lastTempConv) >= CONVERSION_TIME_MS)
+    {
+        lastTempConv = 0;
+        tempCache = ms5611GetConversion(MS5611_D2 + osr);
+        return tempCache;
+    }
+    else
+    {
+        if (lastTempConv == 0 && lastPresConv == 0)
+        {
+            ms5611StartConversion(MS5611_D2 + osr);
+            lastTempConv = now;
+        }
+        return tempCache;
+    }
+}
+
+
+int32_t ms5611_get_raw_pressure(uint8_t osr)
 {
   uint32_t now = ms_ticks;
   if (lastPresConv != 0 && (now - lastPresConv) >= CONVERSION_TIME_MS)
   {
     lastPresConv = 0;
-    return ms5611GetConversion(MS5611_D1 + osr);
+    presCache = ms5611GetConversion(MS5611_D1 + osr);
+    return presCache;
   }
   else
   {
@@ -137,40 +160,20 @@ int32_t ms5611RawPressure(uint8_t osr)
       ms5611StartConversion(MS5611_D1 + osr);
       lastPresConv = now;
     }
-    return 0;
+    return presCache;
   }
 }
-
-int32_t ms5611RawTemperature(uint8_t osr)
-{
-  uint32_t now = ms_ticks;
-  if (lastTempConv != 0 && (now - lastTempConv) >= CONVERSION_TIME_MS)
-  {
-    lastTempConv = 0;
-    tempCache = ms5611GetConversion(MS5611_D2 + osr);
-    return tempCache;
-  }
-  else
-  {
-    if (lastTempConv == 0 && lastPresConv == 0)
-    {
-      ms5611StartConversion(MS5611_D2 + osr);
-      lastTempConv = now;
-    }
-    return tempCache;
-  }
-}
-
 
 // result_array[0] = temperature 
 // result_array[1] = pressure
 /* acquires temperature and pressure : take in pointer and manipulate. no output required */
-void ms5611GetSensorData(float* result_array)
+void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pressure)
 {
+    int32_t raw_pressure = ms5611_get_raw_pressure(MS5611_OSR_4096);
+    int32_t raw_temperature = ms5611_get_raw_temperature(MS5611_OSR_4096); 
     // formulas in datasheet page 7 
-    int32_t raw_pressure = ms5611RawPressure(devAddr);
-    int32_t raw_temperature = ms5611RawTemperature(devAddr); 
-    int32_t dT, result_temperature, result_pressure;
+    int32_t dT, temp, p;
+    int64_t t2, p2, off2, sens2;
 
     if(raw_pressure == 0 || raw_temperature == 0) 
     {
@@ -182,15 +185,15 @@ void ms5611GetSensorData(float* result_array)
     dT = raw_temperature - (((int32_t)calReg.tref)<<8); 
 
     // 2000 + dT * C6 / 2^23  :  Actual temperature 
-    result_temperature = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
-    
-    //TODO: Second order temeperature compensation 
+    temp = 2000 + ((int64_t)dT * (int64_t)calReg.tref >> 23); 
+
     int64_t off = (((int64_t)calReg.off) << 16 ) + ((calReg.tco * dT) >> 7); 
     int64_t sens = (((int64_t)calReg.psens) << 15) + ((calReg.tcs * dT) >> 8); 
     
-    if(raw_pressure != 0) 
-    {
-    }
+    p = (((raw_pressure * sens) >> 21) - off) >> 15; 
+
+    *result_temperature = (float)temp / 100; 
+    *result_pressure = (float)p / 100;
 
     return; 
 }

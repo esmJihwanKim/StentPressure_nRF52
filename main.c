@@ -23,11 +23,15 @@ int main(void)
         NRF_LOG_FLUSH();
     }
 
+    int32_t temperature, pressure; 
     // stops the main function from ending
     while (true)                               
     {              
-        int32_t temperature = ms5611RawTemperature(MS5611_OSR_4096);     
-        NRF_LOG_INFO("TEST RAW TEMPERATURE DATA:::%d", temperature);                              
+        //temperature = ms5611_get_raw_temperature(MS5611_OSR_4096); 
+        //ressure = ms5611_get_raw_pressure(MS5611_OSR_4096);    
+        ms5611_get_calibrated_data(&temperature, &pressure); 
+        NRF_LOG_INFO("TEST TEMPERATURE DATA:::%d", temperature);     
+        NRF_LOG_INFO("TEST PRESSURE DATA:::%d", pressure);                         
         NRF_LOG_FLUSH(); 
     }
 

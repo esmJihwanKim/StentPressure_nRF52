@@ -49,13 +49,14 @@
 
 bool ms5611Init(void);
 
-int32_t ms5611RawPressure(uint8_t osr);
-int32_t ms5611RawTemperature(uint8_t osr);
+int32_t ms5611_get_raw_pressure(uint8_t osr);
+int32_t ms5611_get_raw_temperature(uint8_t osr);
 bool ms5611ReadPROM(void);
 void ms5611Reset(void);
+
 void ms5611StartConversion(uint8_t command);
 int32_t ms5611GetConversion(uint8_t command);
 
-void ms5611GetData(float* pressure, float* temperature, float* asl);
-float ms5611PressureToAltitude(float* pressure);
+void ms5611_get_calibrated_data(int32_t* result_temperature, int32_t* result_pressure);
+
 #endif // MS5611_H

@@ -38,21 +38,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="17" useTextEdit="1" path="../../../main.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="52" useTextEdit="1" path="../../../../../../modules/nrfx/drivers/include/nrfx_timer.h" left="0" top="35" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="5" useTextEdit="1" path="../../../hw_timer.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="193" useTextEdit="1" openedFrom="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52/main.c" path="../../../MS5611.c" left="0" selected="1" top="155" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="10" useTextEdit="1" path="../../../main.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="25" y="5" useTextEdit="1" path="../../../systick.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="46" y="112" useTextEdit="1" path="../../../../../../modules/nrfx/drivers/nrfx_common.h" left="0" top="77" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="36" y="44" useTextEdit="1" path="../../../../../../modules/nrfx/drivers/src/nrfx_timer.c" left="0" top="44" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="37" y="8" useTextEdit="1" openedFrom="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52/main.c" path="../../../ms5611.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../hw_timer.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="56" useTextEdit="1" path="../config/sdk_config.h" left="0" top="56" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="121" useTextEdit="1" path="../../../../../../integration/nrfx/legacy/nrf_drv_uart.h" left="0" top="89" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="16" useTextEdit="1" path="../../../i2cdev.c" left="0" top="91" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="7" useTextEdit="1" openedFrom="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52/main.h" path="../../../i2cdev.h" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="28" y="71" useTextEdit="1" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 6.30/include/stdio.h" left="0" top="42" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="33" useTextEdit="1" path="../../../main.c" left="0" top="10" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../i2cdev.c" left="0" top="85" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="162" useTextEdit="1" path="../../../MS5611.c" left="0" top="160" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" openedFrom="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52/main.c" path="../../../ms5611.h" left="0" selected="1" top="27" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="twi_sensor_pca10040" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Users/WonResearchGroup/Desktop/Dev/Embedded/nRF5_SDK_17.1.0/examples/Won_Research_Group/StentPressure_nRF52" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
