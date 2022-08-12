@@ -1,9 +1,15 @@
 #include "hw_timer.h"
 
+// Hardware Timer Instance Declarations
 const nrfx_timer_t HW_TIMER_INSTANCE = NRFX_TIMER_INSTANCE(0); 
-
-
 volatile int32_t ms_ticks = 0;
+
+// Software Timer Instance Declarations
+
+
+
+
+
 
 void timer0_handler(nrf_timer_event_t event_type, void* p_context) 
 {
@@ -34,3 +40,4 @@ void hw_timer_init (void)
       nrfx_timer_enable(&HW_TIMER_INSTANCE);
       return; 
 }
+
